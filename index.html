@@ -664,6 +664,281 @@
             }
         }
 
+        /* ============================
+           論文 — 3D本棚（Bookshelf）
+           ============================ */
+        .bookshelf-stage {
+            position: relative;
+            padding: 5rem 0 0;
+        }
+        .bookshelf {
+            position: relative;
+            background:
+                radial-gradient(ellipse at top, rgba(255,255,255,0.04) 0%, transparent 60%),
+                linear-gradient(180deg, #1a1410 0%, #2a1f17 55%, #14100c 100%);
+            border-radius: 1.5rem 1.5rem 1rem 1rem;
+            padding: 2.5rem 2.5rem 0;
+            overflow-x: auto;
+            overflow-y: visible;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: #5a3a22 #1a1410;
+            perspective: 2000px;
+            perspective-origin: 50% 80%;
+            box-shadow:
+                inset 0 6px 18px rgba(0,0,0,0.6),
+                0 30px 60px -20px rgba(0,0,0,0.4);
+        }
+        .bookshelf::-webkit-scrollbar { height: 8px; }
+        .bookshelf::-webkit-scrollbar-track { background: #1a1410; border-radius: 4px; }
+        .bookshelf::-webkit-scrollbar-thumb { background: #5a3a22; border-radius: 4px; }
+        .bookshelf::-webkit-scrollbar-thumb:hover { background: #7a5230; }
+
+        .books-row {
+            display: flex;
+            align-items: flex-end;
+            gap: 6px;
+            min-width: max-content;
+            padding: 3rem 2rem 0;
+            transform-style: preserve-3d;
+        }
+
+        .book {
+            flex-shrink: 0;
+            position: relative;
+            width: 56px;
+            height: 320px;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            transform: rotateY(-22deg) translateZ(0);
+            transform-origin: bottom center;
+            transition: transform 0.55s cubic-bezier(0.34, 1.4, 0.64, 1), filter 0.4s;
+            filter: brightness(0.95);
+        }
+        .book:hover,
+        .book:focus-visible {
+            transform: rotateY(-6deg) translateY(-32px) translateZ(60px);
+            filter: brightness(1.1);
+            z-index: 5;
+            outline: none;
+        }
+        .book + .book {
+            margin-left: -2px;
+        }
+
+        .book-spine {
+            position: absolute;
+            inset: 0;
+            border-radius: 3px 2px 2px 3px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 0.4rem 1rem;
+            box-shadow:
+                inset -4px 0 8px rgba(0,0,0,0.4),
+                inset 3px 0 5px rgba(255,255,255,0.08),
+                3px 4px 14px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+        .book-spine::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 4px;
+            width: 1px;
+            background: rgba(255,255,255,0.1);
+        }
+        .book-spine::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 4px;
+            width: 1px;
+            background: rgba(255,255,255,0.08);
+        }
+        .book-spine .spine-top {
+            font-size: 8.5px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(218, 188, 122, 0.85);
+            font-weight: 700;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .book-spine .spine-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 1.25;
+            color: rgba(255,255,255,0.95);
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            letter-spacing: 0.02em;
+            flex: 1;
+            text-align: center;
+            margin: 0.5rem 0;
+            overflow: hidden;
+        }
+        .book-spine .spine-bottom {
+            writing-mode: vertical-rl;
+            font-size: 8px;
+            letter-spacing: 0.2em;
+            color: rgba(218, 188, 122, 0.7);
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .book-spine .spine-band {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, rgba(218, 188, 122, 0.6), transparent);
+        }
+        .book-spine .spine-band--top { top: 22%; }
+        .book-spine .spine-band--bottom { top: 78%; }
+
+        /* 本のカラーバリエーション */
+        .book--navy   .book-spine { background: linear-gradient(180deg, #1f3a5f 0%, #0f4c81 50%, #0a3458 100%); }
+        .book--wine   .book-spine { background: linear-gradient(180deg, #5e1a1a 0%, #7b1d1d 50%, #4a1313 100%); }
+        .book--forest .book-spine { background: linear-gradient(180deg, #1d3d2e 0%, #2d6a4f 50%, #15301f 100%); }
+
+        /* 本棚の板（下部） */
+        .shelf-board {
+            position: relative;
+            height: 22px;
+            margin: 0 -2.5rem -1rem;
+            background:
+                linear-gradient(180deg, #6b4a2b 0%, #4a3120 50%, #2e1f14 100%);
+            box-shadow:
+                inset 0 2px 3px rgba(255,255,255,0.1),
+                inset 0 -2px 4px rgba(0,0,0,0.4),
+                0 8px 20px rgba(0,0,0,0.5);
+            transform: translateZ(-30px);
+        }
+        .shelf-board::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(180deg, rgba(0,0,0,0.5), transparent);
+        }
+
+        /* ホバーで現れるプレビュー */
+        .book-preview {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) translateY(-10px);
+            width: min(420px, calc(100% - 3rem));
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem 1.75rem;
+            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,0,0,0.05);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 6;
+        }
+        .book-preview.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+        .book-preview::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            width: 16px;
+            height: 16px;
+            background: white;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.08);
+        }
+        .book-preview .preview-eyebrow {
+            font-size: 10px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #92711e;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .book-preview .preview-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #18181b;
+            line-height: 1.35;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+        .book-preview .preview-text {
+            font-size: 13px;
+            color: #52525b;
+            line-height: 1.65;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .book-preview .preview-cta {
+            margin-top: 1rem;
+            padding-top: 0.85rem;
+            border-top: 1px solid #f4f4f5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11.5px;
+            color: #71717a;
+        }
+        .book-preview .preview-cta strong {
+            color: #0f4c81;
+            font-weight: 600;
+        }
+
+        .bookshelf-hint {
+            text-align: center;
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #a1a1aa;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+        .bookshelf-hint i {
+            margin: 0 0.4rem;
+            color: #71717a;
+        }
+
+        @media (max-width: 640px) {
+            .bookshelf {
+                padding: 2rem 1.25rem 0;
+                border-radius: 1rem 1rem 0.75rem 0.75rem;
+            }
+            .books-row {
+                padding: 2rem 0.5rem 0;
+            }
+            .book {
+                width: 48px;
+                height: 260px;
+            }
+            .book:hover,
+            .book:focus-visible {
+                transform: rotateY(-3deg) translateY(-20px) translateZ(30px);
+            }
+            .book-spine .spine-title { font-size: 11px; }
+            .book-preview {
+                width: calc(100% - 1.5rem);
+                padding: 1.25rem;
+            }
+            .shelf-board { margin: 0 -1.25rem -0.75rem; }
+        }
+
         /* 論文カード + モーダル */
         .paper-card {
             background: white;
@@ -1498,105 +1773,92 @@
 
 
 
-    <!-- 論文解説・考察 -->
+    <!-- 論文解説・考察（3D本棚スタイル） -->
     <section id="journal-review" class="py-20 bg-zinc-50">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12">
+            <div class="text-center mb-10">
                 <span class="text-[#0f4c81] text-sm font-medium tracking-widest">JOURNAL CLUB COMMENTARY</span>
                 <h2 class="heading-font text-4xl font-semibold mt-2 section-title">論文解説・考察</h2>
-                <p class="text-zinc-500 mt-3 text-sm">本のようにパラパラ横スクロール（ホバーで概要プレビュー）</p>
+                <p class="text-zinc-500 mt-4 text-sm">本棚から本を選ぶように — ホバーで概要、クリックで全文の解説と考察を表示します。</p>
             </div>
 
-            <div class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
-                <!-- Fellowship paper -->
-                <article class="paper-card" 
-                         onclick="openPaperModal(this)" 
-                         data-paper="fellowship"
-                         role="button" tabindex="0"
-                         aria-label="論文の要約と考察を読む">
-                    <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest text-zinc-400 mb-4">
-                        <span class="bg-zinc-900 text-white text-[10px] tracking-[0.15em] px-2.5 py-1 rounded font-medium">JOURNAL</span>
-                        <span>Annals of Thoracic Surgery</span>
-                        <span class="text-amber-500">•</span>
-                        <span>2026;121:66-71</span>
+            <div class="bookshelf-stage">
+                <!-- ホバー時に表示されるプレビューカード -->
+                <div class="book-preview" id="book-preview" aria-hidden="true">
+                    <div class="preview-eyebrow" id="preview-eyebrow"></div>
+                    <div class="preview-title" id="preview-title"></div>
+                    <div class="preview-text" id="preview-text"></div>
+                    <div class="preview-cta">
+                        <span>クリックで <strong>要約・考察</strong> を表示</span>
+                        <i class="fa-solid fa-arrow-right text-[#0f4c81]"></i>
                     </div>
-                    <h3 class="text-2xl leading-snug font-semibold text-zinc-900 mb-5 tracking-tight">
-                        Cardiothoracic Surgery Fellowship: The Challenges Facing Reapplicants Amid the Fall in Match Rates
-                    </h3>
-                    <p class="text-zinc-600 text-[14.5px] leading-relaxed mb-6 line-clamp-4">
-                        米国の心臓血管外科フェローシップにおける再応募者を対象とした全国調査（2018-2023年）。マッチ率の低下、技術評価のバイアス、競争力強化の鍵となる因子を分析。日本の心臓血管外科教育と集約化への示唆を含む解説と考察。
-                    </p>
-                    <div class="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-zinc-100">
-                        <div class="flex items-center gap-3 text-sm text-zinc-500">
-                            <i class="fa-solid fa-quote-left text-zinc-400"></i>
-                            <span>クリックして要約・考察を読む</span>
-                        </div>
-                        <div class="inline-flex items-center gap-2 text-sm font-semibold text-[#0f4c81]">
-                            <span>詳細を開く</span>
-                            <i class="fa-solid fa-arrow-right text-xs paper-cta-arrow"></i>
-                        </div>
-                    </div>
-                </article>
+                </div>
 
-                <!-- CSFD complications paper -->
-                <article class="paper-card" 
-                         onclick="openPaperModal(this)" 
-                         data-paper="csfd"
-                         role="button" tabindex="0"
-                         aria-label="論文の要約と考察を読む">
-                    <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest text-zinc-400 mb-4">
-                        <span class="bg-zinc-900 text-white text-[10px] tracking-[0.15em] px-2.5 py-1 rounded font-medium">JOURNAL</span>
-                        <span>Journal of Vascular Surgery</span>
-                        <span class="text-amber-500">•</span>
-                        <span>2025;82:1558-1566</span>
-                    </div>
-                    <h3 class="text-2xl leading-snug font-semibold text-zinc-900 mb-5 tracking-tight">
-                        Complications of cerebrospinal fluid drainage after open descending thoracic and thoracoabdominal aortic aneurysm repair
-                    </h3>
-                    <p class="text-zinc-600 text-[14.5px] leading-relaxed mb-6 line-clamp-4">
-                        339例のopen DTA/TAAA修復におけるCSFD関連合併症を後ろ向き解析。重大合併症2.4%、軽症25.1%。手術死亡5.3%、SCI13.5%（69%回復）。川崎幸病院との比較を交えた考察。
-                    </p>
-                    <div class="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-zinc-100">
-                        <div class="flex items-center gap-3 text-sm text-zinc-500">
-                            <i class="fa-solid fa-quote-left text-zinc-400"></i>
-                            <span>クリックして要約・考察を読む</span>
-                        </div>
-                        <div class="inline-flex items-center gap-2 text-sm font-semibold text-[#0f4c81]">
-                            <span>詳細を開く</span>
-                            <i class="fa-solid fa-arrow-right text-xs paper-cta-arrow"></i>
-                        </div>
-                    </div>
-                </article>
+                <div class="bookshelf">
+                    <div class="books-row">
+                        <article class="book book--navy"
+                                 onclick="openPaperModal(this)"
+                                 onmouseenter="showBookPreview(this)"
+                                 onmouseleave="hideBookPreview()"
+                                 onfocus="showBookPreview(this)"
+                                 onblur="hideBookPreview()"
+                                 data-paper="fellowship"
+                                 role="button" tabindex="0"
+                                 aria-label="Cardiothoracic Surgery Fellowship の論文解説を読む">
+                            <div class="book-spine">
+                                <div class="spine-band spine-band--top"></div>
+                                <div class="spine-top">Ann Thorac Surg · 2026</div>
+                                <div class="spine-title">CT Surgery Fellowship — Reapplicants &amp; Match Rates</div>
+                                <div class="spine-bottom">Commentary</div>
+                                <div class="spine-band spine-band--bottom"></div>
+                            </div>
+                        </article>
 
-                <!-- New predictive score paper -->
-                <article class="paper-card" 
-                         onclick="openPaperModal(this)" 
-                         data-paper="spinalscore"
-                         role="button" tabindex="0"
-                         aria-label="論文の要約と考察を読む">
-                    <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest text-zinc-400 mb-4">
-                        <span class="bg-zinc-900 text-white text-[10px] tracking-[0.15em] px-2.5 py-1 rounded font-medium">JOURNAL</span>
-                        <span>Journal of Vascular Surgery</span>
-                        <span class="text-amber-500">•</span>
-                        <span>2025 (in press)</span>
+                        <article class="book book--wine"
+                                 onclick="openPaperModal(this)"
+                                 onmouseenter="showBookPreview(this)"
+                                 onmouseleave="hideBookPreview()"
+                                 onfocus="showBookPreview(this)"
+                                 onblur="hideBookPreview()"
+                                 data-paper="csfd"
+                                 role="button" tabindex="0"
+                                 aria-label="CSFD complications の論文解説を読む">
+                            <div class="book-spine">
+                                <div class="spine-band spine-band--top"></div>
+                                <div class="spine-top">J Vasc Surg · 2025</div>
+                                <div class="spine-title">CSFD Complications in Open DTA/TAAA Repair</div>
+                                <div class="spine-bottom">Commentary</div>
+                                <div class="spine-band spine-band--bottom"></div>
+                            </div>
+                        </article>
+
+                        <article class="book book--forest"
+                                 onclick="openPaperModal(this)"
+                                 onmouseenter="showBookPreview(this)"
+                                 onmouseleave="hideBookPreview()"
+                                 onfocus="showBookPreview(this)"
+                                 onblur="hideBookPreview()"
+                                 data-paper="spinalscore"
+                                 role="button" tabindex="0"
+                                 aria-label="Spinal cord ischemia predictive score の論文解説を読む">
+                            <div class="book-spine">
+                                <div class="spine-band spine-band--top"></div>
+                                <div class="spine-top">J Vasc Surg · 2025</div>
+                                <div class="spine-title">Predictive Score for SCI after TAAA Repair</div>
+                                <div class="spine-bottom">Commentary</div>
+                                <div class="spine-band spine-band--bottom"></div>
+                            </div>
+                        </article>
                     </div>
-                    <h3 class="text-2xl leading-snug font-semibold text-zinc-900 mb-5 tracking-tight">
-                        A predictive score for spinal cord ischemia after open thoracoabdominal aortic aneurysm repair
-                    </h3>
-                    <p class="text-zinc-600 text-[14.5px] leading-relaxed mb-6 line-clamp-4">
-                        TAAA open repair 246例の6変数術前リスクスコア（Extent II, BMI≥30, 喫煙, CKD, 年齢>70, 利尿薬）。スコア≥2でSCI予測感度92.1%、AUC 0.902。当センターSCI率2% vs 本研究13.4%。術前リスク層別化に有用。
-                    </p>
-                    <div class="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-zinc-100">
-                        <div class="flex items-center gap-3 text-sm text-zinc-500">
-                            <i class="fa-solid fa-quote-left text-zinc-400"></i>
-                            <span>クリックして要約・考察を読む</span>
-                        </div>
-                        <div class="inline-flex items-center gap-2 text-sm font-semibold text-[#0f4c81]">
-                            <span>詳細を開く</span>
-                            <i class="fa-solid fa-arrow-right text-xs paper-cta-arrow"></i>
-                        </div>
-                    </div>
-                </article>
+
+                    <div class="shelf-board"></div>
+                </div>
+
+                <div class="bookshelf-hint">
+                    <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                    Hover · Click · Scroll
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </div>
             </div>
         </div>
 
@@ -1875,6 +2137,42 @@
                 commentary: `<p><span class="inline-block text-[10px] bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">原論文より</span>簡便な術前6変数スコアでTAAA後SCIを良好に予測。内部検証で高性能。</p><div class="highlight-box"><strong>川崎幸病院ACとの比較</strong><br>当センターSCI率2%は本研究13.4%より大幅に低い。<br>Extent II＋利尿薬使用でSCI率35.3%と注目。<br>6変数は当センターでも容易に追跡可能。</div><p><span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">大島の私見</span>術前カンファでのリスク層別化・患者説明・神経保護戦略強化に即活用可能。当センターデータでの外部検証を検討すべき最重要論文。</p>`
             }
         };
+
+        // 本棚ホバープレビュー用のショート概要
+        const bookPreviews = {
+            fellowship: {
+                eyebrow: "Ann Thorac Surg · 2026;121:66-71",
+                title: "Cardiothoracic Surgery Fellowship — Challenges Facing Reapplicants",
+                text: "米国の心臓血管外科フェローシップ再応募者を対象とした全国調査（2018-2023年・30名のPD回答）。マッチ率の低下、技術評価のバイアス、競争力強化の鍵となる因子（ABSITE・非認定CTSフェロー経験・推薦状・面接）を分析。日本の集約化と若手育成への示唆を考察。"
+            },
+            csfd: {
+                eyebrow: "J Vasc Surg · 2025;82:1558-1566",
+                title: "Complications of CSF Drainage after Open DTA / TAAA Repair",
+                text: "339例のopen DTA/TAAA修復における脊髄液ドレナージ合併症を後ろ向き解析。重大合併症2.4%、軽症25.1%、SCI 13.5%（69%回復）。川崎幸病院ACのCSFDプロトコールとの比較を交えた考察と、論文化価値の提案。"
+            },
+            spinalscore: {
+                eyebrow: "J Vasc Surg · 2025 (in press)",
+                title: "A Predictive Score for Spinal Cord Ischemia after Open TAAA Repair",
+                text: "TAAA open repair 246例の6変数術前リスクスコア（Extent II / BMI≥30 / 喫煙 / CKD / 年齢>70 / 利尿薬）。スコア≥2でSCI感度92.1%・AUC 0.902。当センターSCI率2%との比較と、外部検証の検討を含む考察。"
+            }
+        };
+
+        function showBookPreview(book) {
+            const key = book.dataset.paper;
+            const p = bookPreviews[key];
+            if (!p) return;
+            const panel = document.getElementById('book-preview');
+            document.getElementById('preview-eyebrow').textContent = p.eyebrow;
+            document.getElementById('preview-title').textContent = p.title;
+            document.getElementById('preview-text').textContent = p.text;
+            panel.classList.add('show');
+            panel.setAttribute('aria-hidden', 'false');
+        }
+        function hideBookPreview() {
+            const panel = document.getElementById('book-preview');
+            panel.classList.remove('show');
+            panel.setAttribute('aria-hidden', 'true');
+        }
 
         function openPaperModal(card) {
             const paperKey = card.dataset.paper;
