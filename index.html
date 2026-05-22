@@ -29,9 +29,9 @@
         "@type": "EducationalOrganization",
         "name": "産業医科大学"
       },
-      "url": "https://yourdomain.com/",
+      "url": "https://susumu-bit.github.io/opencode-test/",
       "image": "my-photo.jpg",
-      "description": "2009年より川崎幸病院大動脈センターで心臓血管外科・大動脈外科を専門。2020年よりセンター長として、約2,000例の大動脈手術を執刀。医療AI、臨床データベース（Streamlit）、データ構造化による臨床意思決定支援ツールの開発に注力する医師。",
+      "description": "2011年より川崎幸病院大動脈センターで心臓血管外科・大動脈外科を専門。2020年よりセンター長として、大動脈手術 約1,700例・心臓手術 約300例を執刀。医療AI、臨床データベース（Streamlit）、データ構造化による臨床意思決定支援ツールの開発に注力する医師。",
       "sameAs": [
         "https://x.com/SusumuOshima",
         "https://note.com/susumu_oshima",
@@ -50,15 +50,15 @@
 
     <!-- OGP / Social Meta Tags for better sharing and AI understanding -->
     <meta property="og:title" content="大島 晋 | 心臓血管外科医・大動脈外科医">
-    <meta property="og:description" content="川崎幸病院 大動脈センター センター長。約2,000例の大動脈手術実績を持つ医師。医療AI・臨床データベース開発にも注力しています。">
+    <meta property="og:description" content="川崎幸病院 大動脈センター センター長。大動脈手術約1,700例・心臓手術約300例を執刀。医療AI・臨床データベース開発にも注力。">
     <meta property="og:type" content="profile">
     <meta property="og:image" content="my-photo.jpg">
-    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:url" content="https://susumu-bit.github.io/opencode-test/">
     <meta property="og:site_name" content="大島 晋 - ポートフォリオ">
-    
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="大島 晋 | 心臓血管外科医・大動脈外科医">
-    <meta name="twitter:description" content="川崎幸病院 大動脈センター センター長。約2,000例の大動脈手術実績と医療AI開発に取り組む医師。">
+    <meta name="twitter:description" content="川崎幸病院 大動脈センター センター長。大動脈手術1,700例・心臓手術300例の執刀実績と医療AI開発に取り組む医師。">
     <meta name="twitter:image" content="my-photo.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -430,22 +430,27 @@
 </head>
 <body class="tail-container bg-zinc-50 text-zinc-800">
     <!-- Navigation -->
-    <nav class="bg-white border-b border-zinc-200 sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-[#0f4c81] rounded-full flex items-center justify-center text-white text-sm font-bold">大</div>
-                <div>
-                    <span class="font-semibold text-xl tracking-tight">大島 晋</span>
-                </div>
-            </div>
-            <div class="flex items-center gap-8 text-sm font-medium">
-                <a href="#about" class="nav-link text-zinc-600 hover:text-[#0f4c81]">自己紹介</a>
-                <a href="#career" class="nav-link text-zinc-600 hover:text-[#0f4c81]">経歴</a>
-                <a href="#achievements" class="nav-link text-zinc-600 hover:text-[#0f4c81]">業績</a>
-                <a href="#contact" class="nav-link text-zinc-600 hover:text-[#0f4c81]">問い合わせ</a>
+    <nav class="bg-white/95 backdrop-blur-sm border-b border-zinc-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center gap-6">
+            <a href="#top" class="flex items-baseline gap-2 group">
+                <span class="heading-font font-semibold text-xl tracking-tight text-zinc-900 group-hover:text-[#0f4c81] transition-colors">Susumu Oshima</span>
+                <span class="text-[10px] tracking-[0.18em] uppercase text-zinc-400 font-medium hidden sm:inline">M.D. · Aortic Surgeon</span>
+            </a>
+            <button class="md:hidden text-zinc-700 text-xl" onclick="document.getElementById('nav-links').classList.toggle('hidden')" aria-label="メニュー">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div id="nav-links" class="hidden md:flex items-center gap-6 lg:gap-8 text-[13px] font-medium absolute md:static top-full left-0 right-0 md:top-auto bg-white md:bg-transparent border-b md:border-0 border-zinc-200 px-6 md:px-0 py-4 md:py-0 flex-col md:flex-row">
+                <a href="#about" class="nav-link text-zinc-600 hover:text-[#0f4c81]">自己紹介<span class="hidden lg:inline text-[10px] text-zinc-400 ml-1">Profile</span></a>
+                <a href="#career" class="nav-link text-zinc-600 hover:text-[#0f4c81]">経歴<span class="hidden lg:inline text-[10px] text-zinc-400 ml-1">Career</span></a>
+                <a href="#research" class="nav-link text-zinc-600 hover:text-[#0f4c81]">研究・開発<span class="hidden lg:inline text-[10px] text-zinc-400 ml-1">Research</span></a>
+                <a href="#achievements" class="nav-link text-zinc-600 hover:text-[#0f4c81]">講演<span class="hidden lg:inline text-[10px] text-zinc-400 ml-1">Lectures</span></a>
+                <a href="#journal-review" class="nav-link text-zinc-600 hover:text-[#0f4c81]">論文解説<span class="hidden lg:inline text-[10px] text-zinc-400 ml-1">Commentary</span></a>
+                <a href="#media" class="nav-link text-zinc-600 hover:text-[#0f4c81]">メディア<span class="hidden lg:inline text-[10px] text-zinc-400 ml-1">Media</span></a>
+                <a href="#contact" class="nav-link text-zinc-600 hover:text-[#0f4c81]">問い合わせ<span class="hidden lg:inline text-[10px] text-zinc-400 ml-1">Contact</span></a>
             </div>
         </div>
     </nav>
+    <span id="top"></span>
 
     <!-- Hero -->
     <header class="hero-bg text-white py-24">
@@ -456,7 +461,7 @@
                 </h1>
                 <p class="text-2xl text-blue-100 mb-6">心臓血管外科・大動脈外科医 / 川崎幸病院 大動脈センター センター長</p>
                 <p class="max-w-md text-blue-100 text-lg leading-relaxed">
-                    15年以上にわたり大動脈外科を専門とし、約2,000例の手術を執刀。臨床の傍ら、医療AIとデータサイエンスを活用した臨床ツール開発に取り組んでいます。
+                    15年以上にわたり大動脈外科を専門とし、大動脈手術 約1,700例・心臓手術 約300例を執刀。臨床の傍ら、医療AIとデータサイエンスを活用した臨床ツール開発に取り組んでいます。
                 </p>
                 <div class="flex gap-4 mt-10">
                     <a href="#contact" 
@@ -503,7 +508,7 @@
                         <p>はじめまして、大島 晋（おおしま すすむ）と申します。</p>
                         <p>川崎幸病院大動脈センターのチーフとして、日々胸部大動脈手術に携わっています。当センターでは年間約600件の胸部大動脈手術を行い、日本国内で最大規模の症例数を誇ります。2003年から2025年までの累計では8600件を超える手術を実施しており、私はこれまで約1700例を執刀医として担当してまいりました。</p>
                         <p>専門は大動脈外科、特に胸部大動脈瘤・解離の外科治療です。「患者さんの命を預かる神聖な仕事」という信念のもと、安全性・正確性・耐久性を最優先に、手術の標準化と技術の向上に努めています。</p>
-                        <p>国内外の学会や医療機関で積極的に活動しています。YouTubeチャンネルでは大動脈吻合の技術を公開し、後進の参考にしていただいています。</p>
+                        <p>国内外の学会や医療機関で積極的に活動しています。<a href="https://www.youtube.com/@su1019" target="_blank" rel="noopener noreferrer" class="text-[#0f4c81] font-medium underline decoration-2 underline-offset-2 hover:no-underline">YouTubeチャンネル</a>では大動脈吻合の技術を公開し、後進の参考にしていただいています。</p>
                         <p>私の手術哲学は「低侵襲とは単に切開を小さくすることではなく、患者さんにとって真に利益となるアプローチである」というものです。これからも学会発表・国際交流・技術発信を通じて、若手外科医の育成と大動脈外科の進歩に貢献していきたいと考えています。</p>
                     </div>
                 </div>
@@ -526,11 +531,11 @@
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-zinc-500">資格</span>
-                                <span class="font-medium">医師免許</span>
+                                <span class="font-medium text-right">医師免許<br>外科専門医</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-zinc-500">言語</span>
-                                <span class="font-medium">日本語 (母語) / 英語</span>
+                                <span class="font-medium">日本語（母語） / 英語</span>
                             </div>
                         </div>
                     </div>
@@ -571,7 +576,7 @@
                         </div>
                         <div class="text-sm text-zinc-500 whitespace-nowrap">2018.04 - 現在</div>
                     </div>
-                    <p class="mt-3 text-zinc-600">2011年より同センターに勤務。2018年より主任医長として手術チームをリード。これまでに2,000例近い大動脈手術を執刀。</p>
+                    <p class="mt-3 text-zinc-600">2011年より同センターに勤務。2018年より主任医長として手術チームをリード。これまでに大動脈手術 約1,700例、心臓手術 約300例を執刀。</p>
                 </div>
 
                 <!-- Timeline Item 3 -->
@@ -597,9 +602,44 @@
                         </div>
                         <div class="text-sm text-zinc-500 whitespace-nowrap">2003.04 - 2009.03</div>
                     </div>
-                    <p class="mt-3 text-zinc-600">医学博士課程を修了し、医師免許を取得。</p>
+                    <p class="mt-3 text-zinc-600">医学部医学科を卒業し、医師免許を取得。</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- 研究・開発 -->
+    <section id="research" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-[#0f4c81] text-sm font-medium tracking-widest">RESEARCH &amp; DEVELOPMENT</span>
+                <h2 class="heading-font text-4xl font-semibold mt-2 section-title">研究・開発</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="border border-zinc-200 rounded-3xl p-8 hover:border-[#0f4c81]/40 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-50 text-[#0f4c81] flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-3">臨床データベース構築</h3>
+                    <p class="text-sm text-zinc-600 leading-relaxed">川崎幸病院大動脈センターの累計8,000例超の手術データを Streamlit で構造化。生存解析・群間比較・予後予測を院内で実運用するシステムを自ら開発しています。</p>
+                </div>
+                <div class="border border-zinc-200 rounded-3xl p-8 hover:border-[#0f4c81]/40 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-3">医療AIの実装</h3>
+                    <p class="text-sm text-zinc-600 leading-relaxed">大動脈解離・胸腹部大動脈瘤の意思決定支援ツールを試作中。手術適応・術式選択・術後合併症リスクをデータ駆動で提示できる仕組みを目指しています。</p>
+                </div>
+                <div class="border border-zinc-200 rounded-3xl p-8 hover:border-[#0f4c81]/40 hover:shadow-lg transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-flask-vial"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-3">臨床研究テーマ</h3>
+                    <p class="text-sm text-zinc-600 leading-relaxed">胸腹部大動脈瘤に対する open repair の22年成績、Type A 解離の生涯管理、左開胸下大動脈手術における iNO 使用経験などを継続的に解析・発表しています。</p>
+                </div>
+            </div>
+            <p class="mt-10 text-center text-xs text-zinc-400">※ 研究内容は本人が発表・公開した範囲のみ掲載しています。共同研究のご相談は <a href="#contact" class="underline">問い合わせ</a> より。</p>
         </div>
     </section>
 
@@ -625,83 +665,18 @@
                         <div class="text-emerald-400 text-xs font-medium mb-3">概要 / Summary</div>
                         <ul class="space-y-3 text-zinc-300">
                             <li>• 収載期間：2013年〜2026年</li>
-                            <li>• 収載件数：57件（採択済 invited / oral / posterを含む）</li>
-                            <li>• 国際発表：30件以上（台湾・韓国・タイ・チュニジア・UAE・ウクライナ・イタリア・ロシア・シンガポール・フィリピン）</li>
+                            <li>• 収載件数：50件以上（招待講演・口演・ポスター発表）</li>
+                            <li>• 国際発表：12カ国以上（台湾・韓国・中国・タイ・シンガポール・フィリピン・UAE・ウクライナ・イタリア・フランス・チュニジア・ロシア）</li>
                             <li>• 国内発表：多数（JATS, JSCVS, JSVS, JCS, 地方会, 企業セミナー等）</li>
                         </ul>
                     </div>
                     <div class="text-xs text-zinc-400 leading-relaxed border-l border-white/20 pl-8">
                         最終更新：2026年5月22日<br>
-                        データ抽出元：Conference Presentation Tracker<br>
-                        抽出条件：採択結果＝「採択」のもののみ
+                        収載基準：採択された講演・発表のみ
                     </div>
                 </div>
             </div>
 
-            <!-- アコーディオンで全57件を折りたたむ（黒い大枠の直下） -->
-            <details class="group">
-                <summary class="cursor-pointer bg-white border border-zinc-200 hover:border-zinc-300 transition-colors rounded-3xl px-8 py-6 flex items-center justify-between text-lg font-medium">
-                    <span>🇯🇵 日本語版 講演・学会発表一覧（全57件）</span>
-                    <i class="fa-solid fa-chevron-down transition-transform group-open:rotate-180"></i>
-                </summary>
-                <div class="mt-6 px-2">
-                    <div class="text-xs leading-relaxed text-zinc-600 font-mono max-h-[420px] overflow-auto border border-zinc-100 rounded-2xl p-6 bg-white">
-                        2026-06-15 | BHSS 2026（Bologna Heart Surgery Symposium, イタリア） | 招待講演 | Faculty講演（大動脈疾患）<br>
-                        2026-03-17 | 幸区医師会定例常会（川崎） | 招待講演 | 幸区医師会定例常会 講演<br>
-                        2026-01-17 | 相模血管外科懇話会 | 招待講演 | コーヒーブレイクセミナー講演<br>
-                        2026-01-17 | 第11回大動脈解離シンポジウム | 招待講演 | 第11回大動脈解離シンポジウム<br>
-                        2026-01-16 | CCT Surgical | 招待講演 | 急性大動脈解離手術の現在地と次世代へのメッセージ<br>
-                        2026-01-09 | ESVS（European Society for Vascular Surgery） | 招待講演 | Aortic Session<br>
-                        2025-12-18 | AMICS 2025（モスクワ） | 招待講演 | 報告（AMICS2025）<br>
-                        2025-11-27 | ATCSA 2025（マニラ） | 招待講演 | ATCSA 2025<br>
-                        2025-11-23 | TCVGH（台中栄民総医院） | 招待講演 | Aorta surgery meeting<br>
-                        2025-11-09 | EACTS | 招待講演 | Postoperative Care after Type A Aortic Dissection Repair<br>
-                        2025-11-08 | 第36回関東心臓血管外科手術手技研究会 | 招待講演 | 第36回関東心臓血管外科手術手技研究会<br>
-                        2025-10-23〜24 | XX International Forum on Congenital and Acquired Heart Defects（リヴィウ, ウクライナ） | 招待講演 | XX International Forum on Congenital and Acquired Heart Defects<br>
-                        2025-10-22 | 日本胸部外科学会 | 招待講演 | AATS/JATS Aortic Symposium<br>
-                        2025-10-19〜21 | TSVS Cadaver Workshop 2025（台湾） | 招待講演 | TSVS Cadaver Workshop 2025<br>
-                        2025-09-13 | TSVS 2025 Annual Meeting（台北） | 招待講演 | Suture technique in aortic surgery<br>
-                        2025-08-28〜29 | NUH（National University Hospital, シンガポール） | 招待講演 | NUH Aortic Cadaveric Workshop<br>
-                        2025-05-23〜24 | Aortic Asia 2025 | 招待講演 | Thoracic Aortic Surgery / Aortic Asia 2025<br>
-                        2025-05-21 | JSVS（日本血管外科学会） | 招待講演 | 大動脈消化管瘻に対する治療経験<br>
-                        2025-02-22 | JSCVS（日本心臓血管外科学会） | 招待講演 | 「逃げ場のない」修練こそが最強の外科医を創る —— 圧倒的症例数と全人的責任の狭間で<br>
-                        2025-02-14 | EVSS（UAE・アブダビ） | 招待講演 | Open Surgery After TEVAR（3講演）<br>
-                        2025-02-08 | 第21回多摩心臓外科学会 特別講演 | 招待講演 | 若手大動脈外科医の育成<br>
-                        2024-12-21 | 南京大動脈シンポジウム（Nanjing Aortic Symposium） | 招待講演 | Experiences, Techniques, and Tips for Thoracoabdominal Aortic Surgery<br>
-                        2024-12-05〜07 | AMICS 2024（モスクワ） | 招待講演 | Left thoracotomy arch replacement<br>
-                        2024-11-14〜16 | STS-ASCVTS 2024 | 招待講演 | ランチョンセミナー／STS-ASCVTS 2024 Luncheon Seminar<br>
-                        2024-10-26 | CCT Surgical | 招待講演 | 大動脈弓部置換ライブ・解離アーチビデオライブコメンテーター<br>
-                        2024-10-25 | 第65回日本脈管学会学術総会（JSVS） | 口演 | B型大動脈解離に対する予防的TEVARの適応と限界<br>
-                        2024-10-21 | XIX Ukrainian Forum on Heart Defects（リヴィウ） | 招待講演 | XIX Ukrainian Forum on Heart Defects<br>
-                        2024-10-05 | TSVS（台湾血管外科学会） | 招待講演 | Life-long aortic dissection management<br>
-                        2024-10-04 | 企業セミナー | 招待講演 | 左開胸下大動脈人工血管置換術におけるiNO使用経験<br>
-                        2024-09-05 | CSLベーリング Web講演会 | 招待講演 | ボルヒールWeb講演会<br>
-                        2024-07-05 | BASS 2024（Bundang Aorta Surgery Symposium, 韓国） | 招待講演 | BASS 2024<br>
-                        2024-05-09〜11 | ATCTCV-PAVA（チュニジア） | 招待講演 | Stents explantation / TAAA surgery technique / TAAA Japanese discipline（3講演）<br>
-                        2023-09-06 | JLL Specialist Seminar | 招待講演 | JLL Specialist Seminar講演<br>
-                        2023-07-15 | テルモ企業セミナー | 招待講演 | 松本講演<br>
-                        2023-06-14〜16 | TSVS Aortic Cadaver Workshop（台湾） | 招待講演 | TSVS Aortic Cadaver Workshop<br>
-                        2023-05-01 | MASH Conference（St Malo, フランス） | 招待講演 | MASH Conference<br>
-                        2022-04-02 | Medtronic Aortic Masters '22 | 招待講演 | Management of complex aortic arch surgery<br>
-                        2022-01-21 | HA Hong Kong（Hospital Authority） | 招待講演 | HA Commissioned Training Program<br>
-                        2021-12-03 | Cheng Hsin Live（台湾） | 招待講演 | TAAA lecture<br>
-                        2021-07-01 | TCVGH（台中栄民総医院） | 招待講演 | Open thoracoabdominal aortic aneurysm repair<br>
-                        2021-06-11 | 企業セミナー | 招待講演 | 大動脈外科講演<br>
-                        2021-05-10 | Aortic Asia 2021 | 招待講演 | Aortic Asia 2021<br>
-                        2021-03-12〜14 | STST（Thailand Society for Thoracic Surgeons） | 招待講演 | STST Annual Scientific Symposium<br>
-                        2020-11-30〜12-01 | International Conference on Vascular Surgery 50th Anniversary（リヴィウ, ウクライナ） | 招待講演 | International Conference on Vascular Surgery 50th Anniversary<br>
-                        2019-10-25 | CCT2019 Surgical | 招待講演 | CCT2019 Surgical Faculty懇親会<br>
-                        2019-01-05 | TSVS（台湾血管外科学会） | 招待講演 | Open thoracic aortic surgery（3講演）<br>
-                        2015-06-05 | JSVS | 招待講演 | Najutaステントグラフトの臨床成績 —臨床試験長期成績と市販後の臨床成績—<br>
-                        2015-06-05 | JSVS | 口演 | 胸腹部大動脈瘤<br>
-                        2015-06-04 | JSVS | 招待講演 | Aortic Valve Sparing with Gelweave Valsalva<br>
-                        2015-06-04 | JSVS | 口演 | A型解離<br>
-                        2015-06-04 | JSVS | 口演 | 胸腹部大動脈瘤に対する治療<br>
-                        2014-05-22 | 国内地方会・血管外科学会 | 口演 | 臓器虚血を合併した急性大動脈解離 Stanford Type Aに対する外科治療<br>
-                        2013-04-04〜07 | 第21回アジア心臓血管外科学会（ASCVTS） | 口演／ポスター | Oral/Poster presentation
-                    </div>
-                </div>
-            </details>
 
             <!-- 日本語プロフィール用要約（原文そのまま） -->
             <div class="mb-16 bg-white border border-zinc-100 rounded-3xl p-10">
@@ -709,7 +684,7 @@
                     🇯🇵 日本語プロフィール用要約
                 </h3>
                 <div class="prose prose-zinc text-[15px] leading-relaxed">
-                    2013年から2026年までに、AATS/JATS、EACTS、STS-ASCVTS、ESVS、ASCVTS、Aortic Asia、BASS（韓国）、TSVS（台湾）、ATCSA（マニラ）、NUH（シンガポール）、EVSS（UAE）、AMICS（モスクワ）、Ukraine Vascular Surgery Forum（リヴィウ）、MASH（フランス）、BHSS（ボローニャ）、ATCTCV-PAVA（チュニジア）、南京大動脈シンポジウム、STST（タイ）、Cheng Hsin Live（台湾）、Medtronic Aortic Masters など、国内外で50件以上の招待講演・学会発表を行ってきた。テーマは胸腹部大動脈瘤に対する open repair、複雑大動脈弓部手術、大動脈解離の生涯管理、TEVAR 後の open conversion、若手大動脈外科医の育成など、open surgery を軸とした大動脈外科全般にわたる。
+                    2013年から2026年までに、AATS/JATS、EACTS、STS-ASCVTS、ESVS、ASCVTS、Aortic Asia、BASS（韓国）、TSVS（台湾）、ATCSA（マニラ）、NUH（シンガポール）、EVSS（UAE）、AMICS（モスクワ）、Ukraine Vascular Surgery Forum（リヴィウ）、MASH（コルシカ島, フランス）、BHSS（ボローニャ）、ATCTCV-PAVA（チュニジア）、南京大動脈シンポジウム（オンライン）、STST（タイ）、Cheng Hsin Live（台湾）、Medtronic Aortic Masters など、国内外で50件以上の招待講演・学会発表を行ってきた。テーマは胸腹部大動脈瘤に対する open repair、複雑大動脈弓部手術、大動脈解離の生涯管理、TEVAR 後の open conversion、若手大動脈外科医の育成など、open surgery を軸とした大動脈外科全般にわたる。
                 </div>
             </div>
 
@@ -719,7 +694,7 @@
                     🇬🇧 English Profile Summary
                 </h3>
                 <div class="prose prose-invert text-[15px] leading-relaxed italic">
-                    Dr. Susumu Oshima has delivered more than 50 invited lectures and presentations at international and domestic meetings between 2013 and 2026, including AATS/JATS, EACTS, STS-ASCVTS, ESVS, ASCVTS, Aortic Asia, BASS (Korea), TSVS (Taiwan), ATCSA (Manila), NUH (Singapore), EVSS (UAE), AMICS (Moscow), Ukraine Vascular Surgery Forum (Lviv), MASH (France), BHSS (Bologna, Italy), ATCTCV-PAVA (Tunisia), Nanjing Aortic Symposium (China), STST (Thailand), Cheng Hsin Live (Taiwan), and Medtronic Aortic Masters. His invited topics have focused on open thoracoabdominal aortic aneurysm repair, complex aortic arch surgery, life-long management of aortic dissection, post-TEVAR open conversion, and the training of young aortic surgeons.
+                    Dr. Susumu Oshima has delivered more than 50 invited lectures and presentations at international and domestic meetings between 2013 and 2026, including AATS/JATS, EACTS, STS-ASCVTS, ESVS, ASCVTS, Aortic Asia, BASS (Korea), TSVS (Taiwan), ATCSA (Manila), NUH (Singapore), EVSS (UAE), AMICS (Moscow), Ukraine Vascular Surgery Forum (Lviv), MASH (Corsica, France), BHSS (Bologna, Italy), ATCTCV-PAVA (Tunisia), Nanjing Aortic Symposium (China, online), STST (Thailand), Cheng Hsin Live (Taiwan), and Medtronic Aortic Masters. His invited topics have focused on open thoracoabdominal aortic aneurysm repair, complex aortic arch surgery, life-long management of aortic dissection, post-TEVAR open conversion, and the training of young aortic surgeons.
                 </div>
             </div>
 
@@ -790,7 +765,7 @@
                         <table>
                             <thead><tr><th>開催日</th><th>学会／講演会</th><th>形式</th><th>演題</th></tr></thead>
                             <tbody>
-                                <tr><td>2024-12-21</td><td>南京大動脈シンポジウム（Nanjing Aortic Symposium）</td><td>招待講演</td><td>Experiences, Techniques, and Tips for Thoracoabdominal Aortic Surgery</td></tr>
+                                <tr><td>2024-12-21</td><td>南京大動脈シンポジウム（Nanjing Aortic Symposium / オンライン）</td><td>招待講演</td><td>Experiences, Techniques, and Tips for Thoracoabdominal Aortic Surgery</td></tr>
                                 <tr><td>2024-12-05〜07</td><td>AMICS 2024（モスクワ）</td><td>招待講演</td><td>Left thoracotomy arch replacement</td></tr>
                                 <tr><td>2024-11-14〜16</td><td>STS-ASCVTS 2024</td><td>招待講演</td><td>ランチョンセミナー／STS-ASCVTS 2024 Luncheon Seminar</td></tr>
                                 <tr><td>2024-10-26</td><td>CCT Surgical</td><td>招待講演</td><td>大動脈弓部置換ライブ・解離アーチビデオライブコメンテーター</td></tr>
@@ -818,7 +793,7 @@
                                 <tr><td>2023-09-06</td><td>JLL Specialist Seminar</td><td>招待講演</td><td>JLL Specialist Seminar講演</td></tr>
                                 <tr><td>2023-07-15</td><td>テルモ企業セミナー</td><td>招待講演</td><td>松本講演</td></tr>
                                 <tr><td>2023-06-14〜16</td><td>TSVS Aortic Cadaver Workshop（台湾）</td><td>招待講演</td><td>TSVS Aortic Cadaver Workshop</td></tr>
-                                <tr><td>2023-05-01</td><td>MASH Conference（St Malo, フランス）</td><td>招待講演</td><td>MASH Conference</td></tr>
+                                <tr><td>2023-05-01</td><td>MASH Conference（コルシカ島, フランス）</td><td>招待講演</td><td>MASH Conference</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -826,7 +801,7 @@
 
                 <details class="year-accordion">
                     <summary>
-                        <div class="flex items-center gap-4"><span class="year-label">2022年</span><span class="year-count">2件</span></div>
+                        <div class="flex items-center gap-4"><span class="year-label">2022年</span><span class="year-count">1件</span></div>
                         <i class="fa-solid fa-chevron-down year-chevron"></i>
                     </summary>
                     <div class="year-body">
@@ -834,7 +809,6 @@
                             <thead><tr><th>開催日</th><th>学会／講演会</th><th>形式</th><th>演題</th></tr></thead>
                             <tbody>
                                 <tr><td>2022-04-02</td><td>Medtronic Aortic Masters '22</td><td>招待講演</td><td>Management of complex aortic arch surgery</td></tr>
-                                <tr><td>2022-01-21</td><td>HA Hong Kong（Hospital Authority）</td><td>招待講演</td><td>HA Commissioned Training Program</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -1008,7 +982,7 @@
                         <table>
                             <thead><tr><th>Date</th><th>Conference / Meeting</th><th>Format</th><th>Title</th></tr></thead>
                             <tbody>
-                                <tr><td>21 Dec 2024</td><td>Nanjing Aortic Symposium (China)</td><td>Invited</td><td>Experiences, Techniques, and Tips for Thoracoabdominal Aortic Surgery</td></tr>
+                                <tr><td>21 Dec 2024</td><td>Nanjing Aortic Symposium (China, Online)</td><td>Invited</td><td>Experiences, Techniques, and Tips for Thoracoabdominal Aortic Surgery</td></tr>
                                 <tr><td>5–7 Dec 2024</td><td>AMICS 2024 (Moscow)</td><td>Invited</td><td>Left thoracotomy arch replacement</td></tr>
                                 <tr><td>14–16 Nov 2024</td><td>STS-ASCVTS 2024</td><td>Invited</td><td>STS-ASCVTS 2024 Luncheon Seminar</td></tr>
                                 <tr><td>26 Oct 2024</td><td>CCT Surgical</td><td>Invited</td><td>Aortic Arch Replacement Live &amp; Dissection Arch Video Live Commentator</td></tr>
@@ -1036,7 +1010,7 @@
                                 <tr><td>6 Sep 2023</td><td>JLL Specialist Seminar</td><td>Invited</td><td>JLL Specialist Seminar Lecture</td></tr>
                                 <tr><td>15 Jul 2023</td><td>Terumo Industry Seminar</td><td>Invited</td><td>Matsumoto Lecture</td></tr>
                                 <tr><td>14–16 Jun 2023</td><td>TSVS Aortic Cadaver Workshop (Taiwan)</td><td>Invited</td><td>TSVS Aortic Cadaver Workshop</td></tr>
-                                <tr><td>1 May 2023</td><td>MASH Conference (St Malo, France)</td><td>Invited</td><td>MASH Conference</td></tr>
+                                <tr><td>1 May 2023</td><td>MASH Conference (Corsica, France)</td><td>Invited</td><td>MASH Conference</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -1044,7 +1018,7 @@
 
                 <details class="year-accordion">
                     <summary>
-                        <div class="flex items-center gap-4"><span class="year-label">2022</span><span class="year-count">2 entries</span></div>
+                        <div class="flex items-center gap-4"><span class="year-label">2022</span><span class="year-count">1 entry</span></div>
                         <i class="fa-solid fa-chevron-down year-chevron"></i>
                     </summary>
                     <div class="year-body">
@@ -1052,7 +1026,6 @@
                             <thead><tr><th>Date</th><th>Conference / Meeting</th><th>Format</th><th>Title</th></tr></thead>
                             <tbody>
                                 <tr><td>2 Apr 2022</td><td>Medtronic Aortic Masters '22</td><td>Invited Honored Speaker</td><td>Management of complex aortic arch surgery</td></tr>
-                                <tr><td>21 Jan 2022</td><td>HA Hong Kong (Hospital Authority)</td><td>Invited</td><td>HA Commissioned Training Program</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -1161,31 +1134,7 @@
         </div>
     </section>
 
-    <!-- 問い合わせ -->
-    <section id="contact" class="py-20 bg-zinc-900 text-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="heading-font text-5xl font-semibold mb-6">お問い合わせ</h2>
-            <p class="text-zinc-400 text-lg max-w-2xl mx-auto mb-12">
-                共同研究、講演依頼、セカンドオピニオンなどに関するご相談は、<br>川崎幸病院大動脈センターの公式窓口にて安全に承っております。
-            </p>
 
-            <div class="inline-block mb-8">
-                <a href="https://saiwaihp.jp/daidomyaku/contact/" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="group inline-flex items-center gap-4 bg-white hover:bg-amber-50 text-zinc-900 px-12 py-6 rounded-3xl font-medium text-lg transition-all duration-300 shadow-2xl shadow-zinc-950/50 hover:shadow-2xl hover:-translate-y-1">
-                    <span>川崎幸病院大動脈センター 公式お問い合わせページへ</span>
-                    <i class="fa-solid fa-arrow-up-right-from-square text-xl group-hover:rotate-45 transition-transform"></i>
-                </a>
-            </div>
-
-            <div class="max-w-xl mx-auto text-sm text-zinc-400 leading-relaxed border border-white/10 bg-white/5 backdrop-blur-md rounded-3xl p-8">
-                ※お問い合わせやセカンドオピニオンのご相談は、川崎幸病院大動脈センターの公式窓口にて<br>
-                <span class="text-emerald-400 font-medium">安全に管理されたフォーム</span>より受け付けております。<br>
-                個人情報保護の観点から、当サイトではフォームを設置しておりません。何卒ご理解のほどよろしくお願いいたします。
-            </div>
-        </div>
-    </section>
 
     <!-- 論文解説・考察 -->
     <section id="journal-review" class="py-20 bg-zinc-50">
@@ -1300,17 +1249,17 @@
                         </div>
 
                         <div class="prose prose-zinc max-w-none text-[14.5px] leading-relaxed space-y-6">
-                            <p>本論文が示す米国の状況：Traditional pathway応募者が46%増加する一方でポジション数は22%減少し、41%が未マッチ（2022-2025）。すべてのポジションは埋まる＝需要過多。対照的に日本は志望者激減（40歳未満の若手外科医が20年間で半減）。</p>
+                            <p><span class="inline-block text-[10px] bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">原論文より</span>米国では Traditional pathway 応募者が46%増加する一方でポジション数は22%減少し、41%が未マッチ（2022-2025）。すべてのポジションは埋まる＝需要過多。対照的に日本は志望者激減（40歳未満の若手外科医が20年間で半減）。<span class="text-zinc-400 text-xs">（数値はいずれも原論文の引用）</span></p>
 
                             <div class="highlight-box">
                                 <strong>なぜ日米で逆転するのか</strong><br>
-                                米国：心臓外科医年収約1億4,000万円（医師平均の2倍以上）、年間1,000-2,000例の症例経験、ブランド価値が高い。<br>
-                                日本：診療科間給与差がほぼなし、年間50例未満の施設も多数（世界で日本だけが1,000例を大きく下回る）、ハイリスク・ハイワークだが報酬が見合わない。
+                                <span class="text-[10px] bg-white/60 text-zinc-700 px-2 py-0.5 rounded mr-1 align-middle font-semibold tracking-wider">原論文より</span>米国：心臓外科医年収約1億4,000万円（医師平均の2倍以上）、年間1,000-2,000例の症例経験、ブランド価値が高い。<br>
+                                <span class="text-[10px] bg-white/60 text-zinc-700 px-2 py-0.5 rounded mr-1 align-middle font-semibold tracking-wider">原論文より</span>日本：診療科間給与差がほぼなし、年間50例未満の施設も多数（世界で日本だけが1,000例を大きく下回る）、ハイリスク・ハイワークだが報酬が見合わない。
                             </div>
 
-                            <p><strong>集約化の本質</strong>：「専門医の数を減らす」のではなく「各専門医が十分な症例を経験できる環境を作る」こと。年間10例→一人前まで250年、年間200例→12.5年。集約化により質の高い専門医の育成を加速し、若手の志望動機を回復させ、結果として専門医の絶対数も増加させる戦略。<strong>KACのような年間600件超の世界水準施設</strong>が教育拠点として果たすべき役割が重要。</p>
+                            <p><span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">大島の私見</span><strong>集約化の本質</strong>：「専門医の数を減らす」のではなく「各専門医が十分な症例を経験できる環境を作る」こと。年間10例→一人前まで250年、年間200例→12.5年。集約化により質の高い専門医の育成を加速し、若手の志望動機を回復させ、結果として専門医の絶対数も増加させる戦略。<strong>川崎幸病院大動脈センターのような年間600件超の世界水準施設</strong>が教育拠点として果たすべき役割が重要。</p>
 
-                            <p>ABSITE高得点、Non-accredited CTS fellowshipでの経験、CTS facultyからの強力な推薦状、優れた面接パフォーマンスが競争力を高める。標準化された評価基準とメンターシップの重要性を示唆している。</p>
+                            <p><span class="inline-block text-[10px] bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">原論文より</span>ABSITE高得点、Non-accredited CTS fellowshipでの経験、CTS faculty からの強力な推薦状、優れた面接パフォーマンスが競争力を高める。標準化された評価基準とメンターシップの重要性を示唆している。</p>
                         </div>
                     </div>
 
@@ -1322,20 +1271,114 @@
         </div>
     </section>
 
+    <!-- メディア掲載・関連リンク -->
+    <section id="media" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-[#0f4c81] text-sm font-medium tracking-widest">MEDIA &amp; LINKS</span>
+                <h2 class="heading-font text-4xl font-semibold mt-2 section-title">メディア・関連リンク</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <a href="https://www.youtube.com/@su1019" target="_blank" rel="noopener noreferrer"
+                   class="group flex items-start gap-5 p-7 bg-white border border-zinc-200 rounded-3xl hover:border-red-500 hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="font-semibold text-lg">YouTube チャンネル</h3>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-zinc-400 group-hover:text-red-600 group-hover:rotate-12 transition-all"></i>
+                        </div>
+                        <p class="text-sm text-zinc-600 leading-relaxed mt-2">大動脈吻合の技術解説・手術手技ビデオ。後進外科医の教育を目的に運営。</p>
+                        <div class="text-xs text-zinc-400 mt-3">@su1019</div>
+                    </div>
+                </a>
+
+                <a href="https://x.com/SusumuOshima" target="_blank" rel="noopener noreferrer"
+                   class="group flex items-start gap-5 p-7 bg-white border border-zinc-200 rounded-3xl hover:border-zinc-900 hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-zinc-100 text-zinc-900 flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="font-semibold text-lg">X (Twitter)</h3>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-zinc-400 group-hover:text-zinc-900 group-hover:rotate-12 transition-all"></i>
+                        </div>
+                        <p class="text-sm text-zinc-600 leading-relaxed mt-2">学会・手術・臨床現場からの所感を発信。</p>
+                        <div class="text-xs text-zinc-400 mt-3">@SusumuOshima</div>
+                    </div>
+                </a>
+
+                <a href="https://note.com/susumu_oshima" target="_blank" rel="noopener noreferrer"
+                   class="group flex items-start gap-5 p-7 bg-white border border-zinc-200 rounded-3xl hover:border-emerald-600 hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-solid fa-pencil"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="font-semibold text-lg">note</h3>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-zinc-400 group-hover:text-emerald-700 group-hover:rotate-12 transition-all"></i>
+                        </div>
+                        <p class="text-sm text-zinc-600 leading-relaxed mt-2">大動脈外科・若手育成・医療AIに関する長文エッセイ。</p>
+                        <div class="text-xs text-zinc-400 mt-3">@susumu_oshima</div>
+                    </div>
+                </a>
+
+                <a href="https://aortic-center.jp/" target="_blank" rel="noopener noreferrer"
+                   class="group flex items-start gap-5 p-7 bg-white border border-zinc-200 rounded-3xl hover:border-[#0f4c81] hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-50 text-[#0f4c81] flex items-center justify-center text-xl shrink-0">
+                        <i class="fa-solid fa-hospital"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="font-semibold text-lg">川崎幸病院 大動脈センター</h3>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-zinc-400 group-hover:text-[#0f4c81] group-hover:rotate-12 transition-all"></i>
+                        </div>
+                        <p class="text-sm text-zinc-600 leading-relaxed mt-2">所属施設の公式サイト。診療実績・受診・セカンドオピニオン窓口。</p>
+                        <div class="text-xs text-zinc-400 mt-3">aortic-center.jp</div>
+                    </div>
+                </a>
+            </div>
+            <p class="mt-10 text-center text-xs text-zinc-400">※ 一般向けメディア掲載・受賞歴は順次追記予定です。</p>
+        </div>
+    </section>
+
+    <!-- 問い合わせ -->
+    <section id="contact" class="py-20 bg-zinc-900 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="heading-font text-5xl font-semibold mb-6">お問い合わせ</h2>
+            <p class="text-zinc-400 text-lg max-w-2xl mx-auto mb-12">
+                共同研究、講演依頼、セカンドオピニオンなどに関するご相談は、<br>川崎幸病院大動脈センターの公式窓口にて安全に承っております。
+            </p>
+
+            <div class="inline-block mb-8">
+                <a href="https://saiwaihp.jp/daidomyaku/contact/" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="group inline-flex items-center gap-4 bg-white hover:bg-amber-50 text-zinc-900 px-12 py-6 rounded-3xl font-medium text-lg transition-all duration-300 shadow-2xl shadow-zinc-950/50 hover:shadow-2xl hover:-translate-y-1">
+                    <span>川崎幸病院大動脈センター 公式お問い合わせページへ</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xl group-hover:rotate-45 transition-transform"></i>
+                </a>
+            </div>
+
+            <div class="max-w-xl mx-auto text-sm text-zinc-400 leading-relaxed border border-white/10 bg-white/5 backdrop-blur-md rounded-3xl p-8">
+                ※お問い合わせやセカンドオピニオンのご相談は、川崎幸病院大動脈センターの公式窓口にて<br>
+                <span class="text-emerald-400 font-medium">安全に管理されたフォーム</span>より受け付けております。<br>
+                個人情報保護の観点から、当サイトではフォームを設置しておりません。何卒ご理解のほどよろしくお願いいたします。
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-zinc-950 text-zinc-500 py-12 text-center text-sm">
         <div class="max-w-5xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>© 2026 大島 晋. All Rights Reserved.</div>
-                <div class="flex items-center gap-8 text-xs">
-                    <a href="#" class="hover:text-white transition-colors">プライバシーポリシー</a>
-                    <a href="#" class="hover:text-white transition-colors">研究倫理</a>
-                </div>
+                <div>© 2026 大島 晋（Susumu Oshima, M.D.）All Rights Reserved.</div>
                 <div class="flex gap-6">
-                    <a href="https://x.com/SusumuOshima" target="_blank" class="hover:text-white"><i class="fa-brands fa-x-twitter text-lg"></i></a>
-                    <a href="https://note.com/susumu_oshima" target="_blank" class="hover:text-white"><i class="fa-solid fa-pencil text-lg"></i></a>
-                    <a href="#" class="hover:text-white"><i class="fa-brands fa-linkedin text-lg"></i></a>
-                    <a href="#" class="hover:text-white"><i class="fa-brands fa-researchgate text-lg"></i></a>
+                    <a href="https://www.youtube.com/@su1019" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="YouTube"><i class="fa-brands fa-youtube text-lg"></i></a>
+                    <a href="https://x.com/SusumuOshima" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+                    <a href="https://note.com/susumu_oshima" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="note"><i class="fa-solid fa-pencil text-lg"></i></a>
                 </div>
             </div>
         </div>
