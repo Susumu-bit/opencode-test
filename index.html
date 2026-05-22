@@ -1913,21 +1913,21 @@
                         <!-- ▼ 新刊コーナー（最新の1冊） -->
                         <div class="latest-corner">
                             <div class="latest-label">Latest Reading · 新刊</div>
-                            <article class="book book--charcoal book--featured"
+                            <article class="book book--plum book--featured"
                                      onclick="openPaperModal(this)"
                                      onmouseenter="showBookPreview(this)"
                                      onmouseleave="hideBookPreview()"
                                      onfocus="showBookPreview(this)"
                                      onblur="hideBookPreview()"
-                                     data-paper="pulmonary"
+                                     data-paper="protocol"
                                      role="button" tabindex="0"
-                                     aria-label="新刊：Preoperative Predictors of Pulmonary Complications の論文解説を読む">
+                                     aria-label="新刊：Contemporary outcomes of open TAAA in the endovascular era の論文解説を読む">
                                 <div class="book-ribbon">NEW</div>
                                 <div class="book-spotlight"></div>
                                 <div class="book-spine">
                                     <div class="spine-band spine-band--top"></div>
                                     <div class="spine-top">J Vasc Surg · 2025</div>
-                                    <div class="spine-title">Pulmonary Complications after Open TAAA — Risk Predictors</div>
+                                    <div class="spine-title">Open TAAA in the Endovascular Era — Multidisciplinary Protocol</div>
                                     <div class="spine-bottom">Commentary</div>
                                     <div class="spine-band spine-band--bottom"></div>
                                 </div>
@@ -1938,6 +1938,24 @@
                         <div class="bookshelf-divider" aria-hidden="true"></div>
 
                         <!-- ▼ 既刊（書庫） -->
+                        <article class="book book--charcoal"
+                                 onclick="openPaperModal(this)"
+                                 onmouseenter="showBookPreview(this)"
+                                 onmouseleave="hideBookPreview()"
+                                 onfocus="showBookPreview(this)"
+                                 onblur="hideBookPreview()"
+                                 data-paper="pulmonary"
+                                 role="button" tabindex="0"
+                                 aria-label="Pulmonary Complications after Open TAAA の論文解説を読む">
+                            <div class="book-spine">
+                                <div class="spine-band spine-band--top"></div>
+                                <div class="spine-top">J Vasc Surg · 2025</div>
+                                <div class="spine-title">Pulmonary Complications after Open TAAA — Risk Predictors</div>
+                                <div class="spine-bottom">Commentary</div>
+                                <div class="spine-band spine-band--bottom"></div>
+                            </div>
+                        </article>
+
                         <article class="book book--forest"
                                  onclick="openPaperModal(this)"
                                  onmouseenter="showBookPreview(this)"
@@ -2285,6 +2303,15 @@
                 doi: "https://www.clinicalkey.jp/#!/content/journal/1-s2.0-S074152142501208X",
                 summary: `<p class="mb-6 text-[14.5px] leading-relaxed">Mayo Clinicの単施設後ろ向き研究（2013-2024年）。Open TAAA修復112例（135例中、緊急手術・術中死亡・記録不備を除外）を対象に、術後呼吸器合併症（PC: 48時間以上の人工呼吸、肺炎、再挿管、気管切開のいずれか）の術前予測因子を多変量ロジスティック回帰で同定し、リスクスコアを作成。</p><div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm"><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">PATIENT PROFILE</div><div class="space-y-3"><div><strong>平均年齢</strong>: 54 ± 13歳（21-78歳）</div><div><strong>男性</strong>: 69%</div><div><strong>COPD</strong>: 22%</div><div><strong>喫煙歴あり</strong>: 65%</div><div><strong>Extent II TAAA</strong>: 76%</div></div></div><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">PRIMARY OUTCOMES</div><div class="space-y-3"><div><strong>PC発生率</strong>: 38% (42/112)</div><div><strong>早期死亡</strong>: 5%</div><div><strong>在院日数中央値</strong>: 14日（IQR 11-19）</div><div><strong>C-statistic</strong>: 0.83</div></div></div></div><div class="mt-6 pt-4 border-t border-zinc-200"><div class="text-zinc-400 text-xs mb-3 tracking-wider">RISK SCORE — 多変量解析の予測因子</div><div class="text-sm space-y-1.5"><div>① <strong>FEV1低下</strong> — OR 0.39 (95%CI 0.16–0.92), <em>P</em>=.03</div><div>② <strong>FEV1/FVC比低下</strong> — OR 0.96 (95%CI 0.93–0.99), <em>P</em>=.03</div><div>③ <strong>高脂血症</strong> — OR 6.41 (95%CI 1.56–26.37), <em>P</em>=.01</div><div>④ <strong>eGFR低下</strong> — OR 0.96 (95%CI 0.92–1.01), <em>P</em>=.08</div></div></div>`,
                 commentary: `<p><span class="inline-block text-[10px] bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">原論文より</span>術前肺機能検査（FEV1・FEV1/FVC）と臨床属性（高脂血症・eGFR）を組み込んだリスクスコアモデルで、Open TAAA 術後の呼吸器合併症を C-statistic 0.83 と良好な識別能で予測可能。Letter to Editor 形式。</p><div class="highlight-box"><strong>意外な所見：高脂血症が最強の予測因子</strong><br>OR 6.41 と他因子を大きく上回る。年齢や COPD 診断名よりも、<strong>実測の肺機能パラメータ</strong>が強い予測力を示した点が臨床的に重要（平均54歳と比較的若い集団のため）。背景に炎症・免疫関連メカニズムが推測される。</div><p><span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">大島の私見</span><strong>論文の限界</strong>：Letter 形式のため、(1) 以前の呼吸器手術・開胸歴（胸腔内癒着→肺損傷リスク）、(2) 再手術症例（剥離による肺損傷、手術時間延長）、(3) 肺気腹の重症度 — といった重要因子が解析・記載されていない。Extent II 76%の集団では多くが解離後瘤や先行 TEVAR 後と推測されるが詳細不明。Full article での確認が必要。</p><p><span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">大島の私見</span>術前肺機能評価の重要性を裏付ける一報。<strong>川崎幸病院大動脈センターでも術前 FEV1・FEV1/FVC を全例で評価しており</strong>、本スコアの当センターデータでの外部検証を検討する価値は高い。高脂血症の関与は、術前脂質コントロールや抗炎症戦略を含めた周術期管理の見直しにもつながる示唆。</p>`
+            },
+            protocol: {
+                journal: "Journal of Vascular Surgery",
+                citation: "2025;82(2):391-400",
+                title: "Contemporary outcomes of open thoracoabdominal aortic aneurysm repair in the endovascular era",
+                doi: "https://www.clinicalkey.jp/#!/content/journal/1-s2.0-S0741521425009127",
+                summary: `<p class="mb-6 text-[14.5px] leading-relaxed">USC（南カリフォルニア大学）の単施設後ろ向きコホート研究（2013-2023年）。同期間にTAAA修復220例（endovascular 190 + open 30）のうち、open 30例を多職種標準化プロトコル群（n=14）と非プロトコル群（n=16）に層別化して比較。Endovascular時代におけるopen TAAAの存在意義を再確認。</p><div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm"><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">PATIENT PROFILE</div><div class="space-y-3"><div><strong>平均年齢</strong>: 46歳</div><div><strong>結合組織疾患</strong>: 56.7%</div><div><strong>Extent II TAAA</strong>: 70%</div><div><strong>解離後瘤</strong>: 76.7%</div></div></div><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">PRIMARY OUTCOMES（プロトコル群 vs 非プロトコル群）</div><div class="space-y-3"><div><strong>複合エンドポイント</strong>: <span class="text-emerald-700 font-semibold">0%</span> vs 38% (<em>P</em>=.010)</div><div><strong>院内死亡</strong>: 0% vs 13%</div><div><strong>対麻痺</strong>: 0% vs 19%</div><div><strong>新規透析</strong>: 0% vs 19%</div><div><strong>在院日数</strong>: 8日 vs 15日 (<em>P</em>=.038)</div><div><strong>非自宅退院</strong>: 7% vs 50% (<em>P</em>=.012)</div></div></div></div><div class="mt-6 pt-4 border-t border-zinc-200"><div class="text-zinc-400 text-xs mb-3 tracking-wider">PROTOCOL — 標準化プロトコルの3フェーズ</div><div class="text-sm space-y-2 leading-relaxed"><div><strong>■術前</strong>：選択基準（65歳未満 or 結合組織疾患、EF&gt;50%、eGFR&gt;40）、貧血補正（鉄＋EPO）、Extent IIにTEVAR staging、CSF drain 前日留置、一部にMIS²ACE（肋間動脈コイル塞栓）</div><div><strong>■術中</strong>：CPB全例、MEP/SSEPモニタリング、肋間動脈優先再建（T8-L1で1-2対）→即座にCPB回路から灌流、sequential clamping、選択的内臓灌流（celiac/SMAは温血、腎は冷血）、felt補強吻合</div><div><strong>■術後</strong>：体重ベース積極的輸液、MAP 80-90 mmHg、CSF drainage 10 mL/h×24h（圧&lt;10 mmHg）、ARDS Network protocol、術後1日目まで挿管、多角的疼痛管理、早期経口摂取</div></div></div>`,
+                commentary: `<p><span class="inline-block text-[10px] bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">原論文より</span>Endovascular時代にあって、患者選択・手術手技・術後管理を標準化する多職種プロトコルにより、open TAAA修復は endovascular に匹敵する低侵襲性で実施可能。プロトコル群では死亡・対麻痺・新規透析・脳卒中が<strong>すべて 0%</strong> という驚異的成績。</p><div class="highlight-box"><strong>本論文の核心：ERAS的アプローチを TAAA に適用</strong><br>変動性低減・多職種チーム・標準化が成績の鍵。サンプル数は小さい（n=14）が、プロトコル化の重要性を強く示唆する。脊髄虚血率 0% は、CSF drainage ＋ Distal perfusion ＋ MEP モニタリングの3本柱の徹底による。
+                </div><p><span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">大島の私見</span><strong>川崎幸病院 大動脈センターとの比較</strong>：当センターは年間600件超のopen大動脈手術を行う世界最大規模の TAAA 施設で、症例数は本論文の20倍以上。当センターでも患者選択・術式・周術期管理の標準化を徹底しており、本論文のプロトコルと多くが共通する（CPB、肋間動脈優先再建、選択的内臓灌流、CSF drainage）。<strong>違い</strong>：当センターは結合組織疾患の若年患者だけでなく、高齢・複雑解離後瘤も含む幅広い症例層に対しても、同等以上の脊髄保護成績を実現している点。</p><p><span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">大島の私見</span><strong>論文の限界</strong>：(1) サンプルサイズが小さい（プロトコル群 n=14）ため、複合エンドポイント 0% という結果は statistical fragility が高い。(2) 平均年齢46歳・結合組織疾患56.7% という選択された集団であり、一般的なTAAA集団（より高齢、変性瘤主体）への外挿には注意が必要。(3) プロトコル群が時系列的に後期に集中している可能性（learning curve effect）も完全には除外できない。それでも、open TAAA がいまだに臨床的選択肢として「磨ける」術式であることを再確認させる、若手外科医必読の一報。</p>`
             }
         };
 
@@ -2309,6 +2336,11 @@
                 eyebrow: "J Vasc Surg · 2025;82(3):e83",
                 title: "Preoperative Predictors of Pulmonary Complications after Open TAAA Repair",
                 text: "Mayo Clinic単施設112例（2013-2024年）の後ろ向き研究。呼吸器合併症発生率38%。多変量解析で FEV1、FEV1/FVC比、高脂血症、eGFR低下を予測因子と同定（C-statistic 0.83）。意外な点として高脂血症が OR 6.41 と最強因子。当センターへの応用と Letter 形式の限界を考察。"
+            },
+            protocol: {
+                eyebrow: "J Vasc Surg · 2025;82(2):391-400",
+                title: "Contemporary Outcomes of Open TAAA Repair in the Endovascular Era — Multidisciplinary Protocol",
+                text: "USC単施設30例（2013-2023年）。多職種チームによる標準化プロトコル群（n=14）と非プロトコル群（n=16）の比較。プロトコル群は複合エンドポイント（院内死亡＋対麻痺＋透析＋脳卒中）が0% vs 38%（P=.010）、在院日数 8日 vs 15日（P=.038）。Endovascular時代におけるopen TAAAの存在意義を再確認させる一報。"
             }
         };
 
