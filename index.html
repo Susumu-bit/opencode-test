@@ -402,6 +402,268 @@
             font-feature-settings: 'tnum';
         }
 
+        /* メディア・受賞セクション（エディトリアル風） */
+        .media-section-eyebrow {
+            font-size: 11px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: #a1a1aa;
+            font-weight: 600;
+        }
+        .media-divider {
+            width: 2.5rem;
+            height: 1px;
+            background: #d4d4d8;
+            margin: 1.25rem auto 0;
+        }
+
+        .award-card {
+            position: relative;
+            background: linear-gradient(135deg, #fdfbf3 0%, #faf7ec 100%);
+            border: 1px solid #e6dfc7;
+            border-radius: 1.5rem;
+            padding: 3.5rem 3rem;
+            overflow: hidden;
+        }
+        .award-card::before {
+            content: '';
+            position: absolute;
+            top: -120px;
+            right: -120px;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(192, 155, 42, 0.12) 0%, transparent 65%);
+            pointer-events: none;
+        }
+        .award-card::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(192, 155, 42, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .award-card-inner {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        .award-seal {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #c09b2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #92711e;
+            box-shadow: 0 10px 30px -10px rgba(192, 155, 42, 0.35);
+            position: relative;
+        }
+        .award-seal::before {
+            content: '';
+            position: absolute;
+            inset: 6px;
+            border-radius: 50%;
+            border: 1px solid rgba(192, 155, 42, 0.4);
+        }
+        .award-seal i {
+            font-size: 2rem;
+            z-index: 1;
+        }
+        .award-eyebrow {
+            font-size: 11px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #92711e;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        .award-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #18181b;
+            line-height: 1.15;
+            letter-spacing: -0.015em;
+        }
+        .award-title sup {
+            font-size: 0.45em;
+            vertical-align: super;
+            color: #92711e;
+            margin-left: 0.1em;
+        }
+        .award-meta {
+            color: #57534e;
+            font-size: 14px;
+            line-height: 1.65;
+            margin-top: 0.85rem;
+            max-width: 38em;
+        }
+        .award-meta strong {
+            color: #92711e;
+            font-weight: 600;
+        }
+        .award-link {
+            color: #92711e;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.25s;
+        }
+        .award-card:hover .award-link i {
+            transform: translateX(4px);
+        }
+        .award-link i {
+            transition: transform 0.25s;
+        }
+
+        /* メディア出演 — エディトリアル時系列リスト */
+        .press-list {
+            border-top: 1px solid #e4e4e7;
+        }
+        .press-row {
+            display: grid;
+            grid-template-columns: 110px 1fr 40px;
+            gap: 2.5rem;
+            padding: 2rem 0.5rem;
+            border-bottom: 1px solid #e4e4e7;
+            align-items: start;
+            transition: background 0.25s, padding 0.25s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .press-row.is-link:hover {
+            background: linear-gradient(90deg, transparent 0%, rgba(15,76,129,0.025) 50%, transparent 100%);
+            padding-left: 1rem;
+        }
+        .press-date {
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #71717a;
+            font-weight: 600;
+            font-feature-settings: 'tnum';
+            padding-top: 0.25rem;
+        }
+        .press-body {
+            min-width: 0;
+        }
+        .press-outlet {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #18181b;
+            letter-spacing: -0.015em;
+            line-height: 1.3;
+        }
+        .press-topic {
+            font-size: 13.5px;
+            color: #52525b;
+            margin-top: 0.5rem;
+            line-height: 1.7;
+        }
+        .press-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.75rem;
+        }
+        .press-tag {
+            font-size: 10.5px;
+            letter-spacing: 0.05em;
+            color: #71717a;
+            background: #f4f4f5;
+            padding: 0.25rem 0.7rem;
+            border-radius: 9999px;
+            border: 1px solid #e4e4e7;
+        }
+        .press-arrow {
+            color: #d4d4d8;
+            font-size: 14px;
+            transition: all 0.25s;
+            padding-top: 0.35rem;
+        }
+        .press-row.is-link:hover .press-arrow {
+            color: #0f4c81;
+            transform: translateX(4px);
+        }
+
+        /* 関連リンク — ミニマルなピル */
+        .pill-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 0.85rem 1.4rem;
+            border: 1px solid #e4e4e7;
+            border-radius: 9999px;
+            font-size: 13.5px;
+            font-weight: 500;
+            color: #3f3f46;
+            background: white;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .pill-link:hover {
+            border-color: #18181b;
+            color: #18181b;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.12);
+        }
+        .pill-link i {
+            font-size: 1rem;
+            color: #71717a;
+            transition: color 0.25s;
+        }
+        .pill-link:hover i {
+            color: #18181b;
+        }
+
+        @media (max-width: 640px) {
+            .award-card {
+                padding: 2.5rem 1.75rem;
+            }
+            .award-card-inner {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                text-align: left;
+            }
+            .award-seal {
+                width: 64px;
+                height: 64px;
+            }
+            .award-seal i {
+                font-size: 1.5rem;
+            }
+            .award-title {
+                font-size: 1.5rem;
+            }
+            .press-row {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+                padding: 1.5rem 0;
+            }
+            .press-row .press-arrow {
+                display: none;
+            }
+            .press-date {
+                padding-top: 0;
+            }
+            .press-outlet {
+                font-size: 1.15rem;
+            }
+        }
+
         /* 論文カード + モーダル */
         .paper-card {
             background: white;
@@ -1371,157 +1633,110 @@
         </div>
     </section>
 
-    <!-- メディア掲載・受賞・関連リンク -->
-    <section id="media" class="py-20 bg-white">
+    <!-- メディア・受賞（エディトリアル風） -->
+    <section id="media" class="py-24 bg-stone-50">
         <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-[#0f4c81] text-sm font-medium tracking-widest">MEDIA &amp; AWARDS</span>
-                <h2 class="heading-font text-4xl font-semibold mt-2 section-title">メディア・受賞</h2>
+            <div class="text-center mb-20">
+                <div class="media-section-eyebrow">PRESS · AWARDS · APPEARANCES</div>
+                <h2 class="heading-font text-5xl font-semibold mt-3 text-zinc-900 tracking-tight">メディア・受賞</h2>
+                <div class="media-divider"></div>
             </div>
 
-            <!-- 受賞・選出 -->
-            <div class="mb-14">
-                <div class="flex items-center gap-3 mb-6">
-                    <div class="text-xl">🏅</div>
-                    <h3 class="text-xl font-semibold text-zinc-900">受賞・選出</h3>
+            <!-- 受賞（ヒーロー扱い） -->
+            <div class="mb-24">
+                <div class="flex items-baseline justify-between mb-7">
+                    <h3 class="text-[11px] tracking-[0.28em] uppercase text-zinc-500 font-semibold">Awards &amp; Recognition</h3>
+                    <span class="text-[11px] text-zinc-400 tracking-wider">01</span>
                 </div>
-                <a href="https://saiwaihp.jp/daidomyaku/blog/?p=5814" target="_blank" rel="noopener noreferrer"
-                   class="group block p-7 bg-gradient-to-br from-amber-50 to-white border border-amber-200 rounded-3xl hover:border-amber-500 hover:shadow-xl transition-all">
-                    <div class="flex items-start gap-5">
-                        <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl shrink-0">
+                <a href="https://saiwaihp.jp/daidomyaku/blog/?p=5814" target="_blank" rel="noopener noreferrer" class="award-card group block">
+                    <div class="award-card-inner">
+                        <div class="award-seal">
                             <i class="fa-solid fa-award"></i>
                         </div>
-                        <div class="flex-1">
-                            <div class="flex items-center justify-between gap-2">
-                                <h4 class="font-semibold text-lg">Best Doctors in Japan 2024-2025 選出</h4>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-zinc-400 group-hover:text-amber-600 group-hover:rotate-12 transition-all"></i>
-                            </div>
-                            <p class="text-sm text-zinc-600 leading-relaxed mt-2">米 Best Doctors®, Inc. による同領域の医師同士の評価をもとに選定。2024年6月発表。<span class="font-medium text-amber-700">2回目の選出</span>。</p>
-                            <div class="text-xs text-zinc-400 mt-3">川崎幸病院 大動脈センター 公式ブログ</div>
+                        <div>
+                            <div class="award-eyebrow">Selected · 2024 — 2025</div>
+                            <h4 class="award-title">The Best Doctors<sup>®</sup> in Japan</h4>
+                            <p class="award-meta">米 Best Doctors<sup>®</sup>, Inc.（1989年設立）による同領域の医師同士のピアレビューを通じて選出。<strong>2回目の選出</strong>。日本国内では同制度下で約7,100名（2024年6月時点）の医師が認定。</p>
                         </div>
+                        <span class="award-link hidden md:inline-flex">View Announcement <i class="fa-solid fa-arrow-right text-xs"></i></span>
                     </div>
                 </a>
             </div>
 
-            <!-- メディア掲載 -->
-            <div class="mb-14">
-                <div class="flex items-center gap-3 mb-6">
-                    <div class="text-xl">📰</div>
-                    <h3 class="text-xl font-semibold text-zinc-900">メディア掲載・出演</h3>
+            <!-- メディア掲載・出演（エディトリアル時系列） -->
+            <div class="mb-24">
+                <div class="flex items-baseline justify-between mb-7">
+                    <h3 class="text-[11px] tracking-[0.28em] uppercase text-zinc-500 font-semibold">Press &amp; Appearances</h3>
+                    <span class="text-[11px] text-zinc-400 tracking-wider">02</span>
                 </div>
-                <div class="grid md:grid-cols-2 gap-5">
-                    <a href="https://saiwaihp.jp/daidomyaku/blog/?p=5984" target="_blank" rel="noopener noreferrer"
-                       class="group flex items-start gap-5 p-6 bg-white border border-zinc-200 rounded-3xl hover:border-[#0f4c81] hover:shadow-lg transition-all">
-                        <div class="w-11 h-11 rounded-2xl bg-blue-50 text-[#0f4c81] flex items-center justify-center text-lg shrink-0">
-                            <i class="fa-solid fa-book-open"></i>
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex items-center justify-between gap-2">
-                                <h4 class="font-semibold">DOCTOR'S MAGAZINE</h4>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-zinc-400 group-hover:text-[#0f4c81] transition-all"></i>
+                <div class="press-list">
+                    <a href="https://saiwaihp.jp/daidomyaku/blog/?p=5984" target="_blank" rel="noopener noreferrer" class="press-row is-link">
+                        <div class="press-date">2025 · 06</div>
+                        <div class="press-body">
+                            <div class="press-outlet">DOCTOR&apos;S MAGAZINE</div>
+                            <div class="press-topic">2025年7月号「Challenger」ページにて単独インタビュー特集。医師としての歩みと哲学を語る。</div>
+                            <div class="press-tags">
+                                <span class="press-tag">Magazine</span>
+                                <span class="press-tag">Interview</span>
                             </div>
-                            <p class="text-sm text-zinc-600 leading-relaxed mt-1.5">2025年7月号「Challenger」ページに掲載</p>
-                            <div class="text-[11px] text-zinc-400 mt-2">2025-06-25 公開</div>
                         </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square press-arrow"></i>
                     </a>
 
-                    <a href="https://www.meijiyasuda.co.jp/find/list/junkanki_pro/" target="_blank" rel="noopener noreferrer"
-                       class="group flex items-start gap-5 p-6 bg-white border border-zinc-200 rounded-3xl hover:border-[#0f4c81] hover:shadow-lg transition-all">
-                        <div class="w-11 h-11 rounded-2xl bg-blue-50 text-[#0f4c81] flex items-center justify-center text-lg shrink-0">
-                            <i class="fa-solid fa-shield-heart"></i>
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex items-center justify-between gap-2">
-                                <h4 class="font-semibold">明治安田生命「循環器病 対策Pro」</h4>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-zinc-400 group-hover:text-[#0f4c81] transition-all"></i>
+                    <a href="https://www.meijiyasuda.co.jp/find/list/junkanki_pro/" target="_blank" rel="noopener noreferrer" class="press-row is-link">
+                        <div class="press-date">2025</div>
+                        <div class="press-body">
+                            <div class="press-outlet">明治安田生命</div>
+                            <div class="press-topic">2025年発売の循環器病保険「循環器病 対策Pro」関連コンテンツに専門医として出演。大動脈疾患について解説。</div>
+                            <div class="press-tags">
+                                <span class="press-tag">Insurance</span>
+                                <span class="press-tag">Educational Video</span>
                             </div>
-                            <p class="text-sm text-zinc-600 leading-relaxed mt-1.5">大動脈疾患の解説動画に専門医として出演（2025年発売の循環器病保険関連コンテンツ）</p>
-                            <div class="text-[11px] text-zinc-400 mt-2">2025年</div>
                         </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square press-arrow"></i>
                     </a>
 
-                    <div class="group flex items-start gap-5 p-6 bg-white border border-zinc-200 rounded-3xl md:col-span-2">
-                        <div class="w-11 h-11 rounded-2xl bg-zinc-100 text-zinc-700 flex items-center justify-center text-lg shrink-0">
-                            <i class="fa-solid fa-tv"></i>
+                    <div class="press-row">
+                        <div class="press-date">2023 · 02</div>
+                        <div class="press-body">
+                            <div class="press-outlet">TBS / テレビ朝日 / 日本テレビ</div>
+                            <div class="press-topic">急性大動脈解離を特集した朝の情報番組3局（THE TIME / 羽鳥慎一モーニングショー / ZIP!）で専門医として解説。</div>
+                            <div class="press-tags">
+                                <span class="press-tag">TV</span>
+                                <span class="press-tag">Expert Commentary</span>
+                                <span class="press-tag">Acute Aortic Dissection</span>
+                            </div>
                         </div>
-                        <div class="flex-1">
-                            <h4 class="font-semibold">テレビ出演（2023年2月23日）</h4>
-                            <p class="text-sm text-zinc-600 leading-relaxed mt-1.5">急性大動脈解離をテーマに、複数の朝の情報番組で専門医として解説：</p>
-                            <ul class="text-sm text-zinc-700 mt-2 space-y-1">
-                                <li>・ TBS「<span class="font-medium">THE TIME</span>」</li>
-                                <li>・ テレビ朝日「<span class="font-medium">羽鳥慎一モーニングショー</span>」</li>
-                                <li>・ 日本テレビ「<span class="font-medium">ZIP!</span>」</li>
-                            </ul>
-                        </div>
+                        <i class="press-arrow"></i>
                     </div>
                 </div>
             </div>
 
-            <!-- 関連リンク -->
+            <!-- 関連リンク（ミニマルなピル） -->
             <div>
-                <div class="flex items-center gap-3 mb-6">
-                    <div class="text-xl">🔗</div>
-                    <h3 class="text-xl font-semibold text-zinc-900">関連リンク</h3>
+                <div class="flex items-baseline justify-between mb-7">
+                    <h3 class="text-[11px] tracking-[0.28em] uppercase text-zinc-500 font-semibold">Connect</h3>
+                    <span class="text-[11px] text-zinc-400 tracking-wider">03</span>
                 </div>
-                <div class="grid md:grid-cols-2 gap-5">
-                    <a href="https://www.youtube.com/@su1019" target="_blank" rel="noopener noreferrer"
-                       class="group flex items-start gap-5 p-6 bg-white border border-zinc-200 rounded-3xl hover:border-red-500 hover:shadow-lg transition-all">
-                        <div class="w-11 h-11 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-lg shrink-0">
-                            <i class="fa-brands fa-youtube"></i>
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex items-center justify-between gap-2">
-                                <h4 class="font-semibold">YouTube チャンネル</h4>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-zinc-400 group-hover:text-red-600 transition-all"></i>
-                            </div>
-                            <p class="text-sm text-zinc-600 leading-relaxed mt-1.5">大動脈吻合の技術解説・手術手技ビデオ。後進外科医の教育を目的に運営。</p>
-                            <div class="text-[11px] text-zinc-400 mt-2">@su1019</div>
-                        </div>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://www.youtube.com/@su1019" target="_blank" rel="noopener noreferrer" class="pill-link">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span>YouTube</span>
+                        <span class="text-zinc-400 text-xs">@su1019</span>
                     </a>
-
-                    <a href="https://x.com/SusumuOshima" target="_blank" rel="noopener noreferrer"
-                       class="group flex items-start gap-5 p-6 bg-white border border-zinc-200 rounded-3xl hover:border-zinc-900 hover:shadow-lg transition-all">
-                        <div class="w-11 h-11 rounded-2xl bg-zinc-100 text-zinc-900 flex items-center justify-center text-lg shrink-0">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex items-center justify-between gap-2">
-                                <h4 class="font-semibold">X (Twitter)</h4>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-zinc-400 group-hover:text-zinc-900 transition-all"></i>
-                            </div>
-                            <p class="text-sm text-zinc-600 leading-relaxed mt-1.5">学会・手術・臨床現場からの所感を発信。</p>
-                            <div class="text-[11px] text-zinc-400 mt-2">@SusumuOshima</div>
-                        </div>
+                    <a href="https://x.com/SusumuOshima" target="_blank" rel="noopener noreferrer" class="pill-link">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <span>X</span>
+                        <span class="text-zinc-400 text-xs">@SusumuOshima</span>
                     </a>
-
-                    <a href="https://note.com/susumu_oshima" target="_blank" rel="noopener noreferrer"
-                       class="group flex items-start gap-5 p-6 bg-white border border-zinc-200 rounded-3xl hover:border-emerald-600 hover:shadow-lg transition-all">
-                        <div class="w-11 h-11 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-lg shrink-0">
-                            <i class="fa-solid fa-pencil"></i>
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex items-center justify-between gap-2">
-                                <h4 class="font-semibold">note</h4>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-zinc-400 group-hover:text-emerald-700 transition-all"></i>
-                            </div>
-                            <p class="text-sm text-zinc-600 leading-relaxed mt-1.5">大動脈外科・若手育成・医療AIに関する長文エッセイ。</p>
-                            <div class="text-[11px] text-zinc-400 mt-2">@susumu_oshima</div>
-                        </div>
+                    <a href="https://note.com/susumu_oshima" target="_blank" rel="noopener noreferrer" class="pill-link">
+                        <i class="fa-solid fa-pencil"></i>
+                        <span>note</span>
+                        <span class="text-zinc-400 text-xs">@susumu_oshima</span>
                     </a>
-
-                    <a href="https://saiwaihp.jp/daidomyaku/" target="_blank" rel="noopener noreferrer"
-                       class="group flex items-start gap-5 p-6 bg-white border border-zinc-200 rounded-3xl hover:border-[#0f4c81] hover:shadow-lg transition-all">
-                        <div class="w-11 h-11 rounded-2xl bg-blue-50 text-[#0f4c81] flex items-center justify-center text-lg shrink-0">
-                            <i class="fa-solid fa-hospital"></i>
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex items-center justify-between gap-2">
-                                <h4 class="font-semibold">川崎幸病院 大動脈センター</h4>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-zinc-400 group-hover:text-[#0f4c81] transition-all"></i>
-                            </div>
-                            <p class="text-sm text-zinc-600 leading-relaxed mt-1.5">所属施設の公式サイト。診療実績・受診・セカンドオピニオン窓口。</p>
-                            <div class="text-[11px] text-zinc-400 mt-2">saiwaihp.jp/daidomyaku</div>
-                        </div>
+                    <a href="https://saiwaihp.jp/daidomyaku/" target="_blank" rel="noopener noreferrer" class="pill-link">
+                        <i class="fa-solid fa-hospital"></i>
+                        <span>川崎幸病院 大動脈センター</span>
                     </a>
                 </div>
             </div>
