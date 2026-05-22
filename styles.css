@@ -1,0 +1,72 @@
+/* 
+ * 医師・研究者向けポートフォリオ用カスタムCSS
+ * 洗練された医療・学術向けデザイン
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap');
+
+:root {
+    --primary-color: #0f4c81;
+    --accent-color: #1e6091;
+}
+
+body {
+    font-family: 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+}
+
+.heading-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-bg {
+    background: linear-gradient(135deg, #0f4c81 0%, #1e6091 100%);
+}
+
+.nav-link {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.publication-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.publication-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.profile-image {
+    transition: transform 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+/* フォームのスタイリング */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(15, 76, 129, 0.15);
+}
