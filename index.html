@@ -85,10 +85,109 @@
         .nav-link {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .nav-link:hover {
             color: #0f4c81;
             transform: translateY(-2px);
+        }
+
+        /* モバイルドロワーメニュー */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .nav-toggle {
+            display: none;
+        }
+        .nav-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(9, 9, 11, 0.4);
+            z-index: 49;
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        .nav-backdrop.is-open {
+            display: block;
+            opacity: 1;
+        }
+        @media (max-width: 767px) {
+            .nav-toggle {
+                display: inline-flex;
+                width: 2.5rem;
+                height: 2.5rem;
+                align-items: center;
+                justify-content: center;
+                color: #3f3f46;
+                border: 1px solid #e4e4e7;
+                border-radius: 0.75rem;
+                background: white;
+                cursor: pointer;
+                font-size: 1.05rem;
+                transition: all 0.2s;
+            }
+            .nav-toggle:hover,
+            .nav-toggle:focus-visible {
+                color: #0f4c81;
+                border-color: #0f4c81;
+                outline: none;
+            }
+            .nav-toggle.is-open i::before {
+                content: "\f00d"; /* fa-xmark */
+            }
+            .nav-menu {
+                position: fixed;
+                top: 4.5rem;
+                right: 1rem;
+                left: auto;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: white;
+                border: 1px solid #e4e4e7;
+                border-radius: 1.25rem;
+                padding: 0.5rem;
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                min-width: 220px;
+                z-index: 60;
+                transform: translateX(calc(100% + 2rem));
+                opacity: 0;
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s;
+                pointer-events: none;
+            }
+            .nav-menu.is-open {
+                transform: translateX(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
+            .nav-menu .nav-link {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0.85rem 1rem;
+                border-radius: 0.75rem;
+                color: #18181b;
+                font-weight: 500;
+            }
+            .nav-menu .nav-link:hover,
+            .nav-menu .nav-link:focus-visible {
+                background: #f4f4f5;
+                color: #0f4c81;
+                transform: none;
+                outline: none;
+            }
+            .nav-menu .nav-link .nav-en {
+                display: inline !important;
+                font-size: 10px;
+                letter-spacing: 0.15em;
+                color: #a1a1aa;
+                text-transform: uppercase;
+                margin-left: 0.5rem;
+            }
         }
 
         .section-title {
@@ -436,20 +535,21 @@
                 <span class="heading-font font-semibold text-xl tracking-tight text-zinc-900 group-hover:text-[#0f4c81] transition-colors">Susumu Oshima</span>
                 <span class="text-[10px] tracking-[0.18em] uppercase text-zinc-400 font-medium hidden sm:inline">M.D. · Aortic Surgeon</span>
             </a>
-            <button class="md:hidden text-zinc-700 text-xl" onclick="document.getElementById('nav-links').classList.toggle('hidden')" aria-label="メニュー">
+            <button id="nav-toggle" class="nav-toggle" onclick="toggleNav()" aria-label="メニュー" aria-expanded="false" aria-controls="nav-links">
                 <i class="fa-solid fa-bars"></i>
             </button>
-            <div id="nav-links" class="hidden md:flex items-center gap-6 lg:gap-8 text-[13px] font-medium absolute md:static top-full left-0 right-0 md:top-auto bg-white md:bg-transparent border-b md:border-0 border-zinc-200 px-6 md:px-0 py-4 md:py-0 flex-col md:flex-row">
-                <a href="#about" class="nav-link text-zinc-600 hover:text-[#0f4c81]">自己紹介<span class="hidden lg:inline text-[10px] text-zinc-400 ml-1">Profile</span></a>
-                <a href="#career" class="nav-link text-zinc-600 hover:text-[#0f4c81]">経歴<span class="hidden lg:inline text-[10px] text-zinc-400 ml-1">Career</span></a>
-                <a href="#research" class="nav-link text-zinc-600 hover:text-[#0f4c81]">研究・開発<span class="hidden lg:inline text-[10px] text-zinc-400 ml-1">Research</span></a>
-                <a href="#achievements" class="nav-link text-zinc-600 hover:text-[#0f4c81]">講演<span class="hidden lg:inline text-[10px] text-zinc-400 ml-1">Lectures</span></a>
-                <a href="#journal-review" class="nav-link text-zinc-600 hover:text-[#0f4c81]">論文解説<span class="hidden lg:inline text-[10px] text-zinc-400 ml-1">Commentary</span></a>
-                <a href="#media" class="nav-link text-zinc-600 hover:text-[#0f4c81]">メディア<span class="hidden lg:inline text-[10px] text-zinc-400 ml-1">Media</span></a>
-                <a href="#contact" class="nav-link text-zinc-600 hover:text-[#0f4c81]">問い合わせ<span class="hidden lg:inline text-[10px] text-zinc-400 ml-1">Contact</span></a>
+            <div id="nav-links" class="nav-menu text-zinc-600">
+                <a href="#about" class="nav-link hover:text-[#0f4c81]" onclick="closeNav()">自己紹介<span class="nav-en hidden lg:inline text-[10px] text-zinc-400 ml-1">Profile</span></a>
+                <a href="#career" class="nav-link hover:text-[#0f4c81]" onclick="closeNav()">経歴<span class="nav-en hidden lg:inline text-[10px] text-zinc-400 ml-1">Career</span></a>
+                <a href="#research" class="nav-link hover:text-[#0f4c81]" onclick="closeNav()">研究・開発<span class="nav-en hidden lg:inline text-[10px] text-zinc-400 ml-1">Research</span></a>
+                <a href="#achievements" class="nav-link hover:text-[#0f4c81]" onclick="closeNav()">講演<span class="nav-en hidden lg:inline text-[10px] text-zinc-400 ml-1">Lectures</span></a>
+                <a href="#journal-review" class="nav-link hover:text-[#0f4c81]" onclick="closeNav()">論文解説<span class="nav-en hidden lg:inline text-[10px] text-zinc-400 ml-1">Commentary</span></a>
+                <a href="#media" class="nav-link hover:text-[#0f4c81]" onclick="closeNav()">メディア<span class="nav-en hidden lg:inline text-[10px] text-zinc-400 ml-1">Media</span></a>
+                <a href="#contact" class="nav-link hover:text-[#0f4c81]" onclick="closeNav()">問い合わせ<span class="nav-en hidden lg:inline text-[10px] text-zinc-400 ml-1">Contact</span></a>
             </div>
         </div>
     </nav>
+    <div id="nav-backdrop" class="nav-backdrop" onclick="closeNav()"></div>
     <span id="top"></span>
 
     <!-- Hero -->
@@ -1408,6 +1508,27 @@
                 }
             });
         });
+
+        // モバイルナビ ドロワー制御
+        function toggleNav() {
+            const menu = document.getElementById('nav-links');
+            const backdrop = document.getElementById('nav-backdrop');
+            const toggle = document.getElementById('nav-toggle');
+            const willOpen = !menu.classList.contains('is-open');
+            menu.classList.toggle('is-open', willOpen);
+            backdrop.classList.toggle('is-open', willOpen);
+            toggle.classList.toggle('is-open', willOpen);
+            toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        }
+        function closeNav() {
+            const menu = document.getElementById('nav-links');
+            const backdrop = document.getElementById('nav-backdrop');
+            const toggle = document.getElementById('nav-toggle');
+            menu.classList.remove('is-open');
+            backdrop.classList.remove('is-open');
+            toggle.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+        }
 
         // 論文モーダル制御
         function openPaperModal() {
