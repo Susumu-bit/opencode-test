@@ -1913,21 +1913,21 @@
                         <!-- ▼ 新刊コーナー（最新の1冊） -->
                         <div class="latest-corner">
                             <div class="latest-label">Latest Reading · 新刊</div>
-                            <article class="book book--forest book--featured"
+                            <article class="book book--charcoal book--featured"
                                      onclick="openPaperModal(this)"
                                      onmouseenter="showBookPreview(this)"
                                      onmouseleave="hideBookPreview()"
                                      onfocus="showBookPreview(this)"
                                      onblur="hideBookPreview()"
-                                     data-paper="spinalscore"
+                                     data-paper="pulmonary"
                                      role="button" tabindex="0"
-                                     aria-label="新刊：Predictive Score for SCI の論文解説を読む">
+                                     aria-label="新刊：Preoperative Predictors of Pulmonary Complications の論文解説を読む">
                                 <div class="book-ribbon">NEW</div>
                                 <div class="book-spotlight"></div>
                                 <div class="book-spine">
                                     <div class="spine-band spine-band--top"></div>
                                     <div class="spine-top">J Vasc Surg · 2025</div>
-                                    <div class="spine-title">Predictive Score for SCI after TAAA Repair</div>
+                                    <div class="spine-title">Pulmonary Complications after Open TAAA — Risk Predictors</div>
                                     <div class="spine-bottom">Commentary</div>
                                     <div class="spine-band spine-band--bottom"></div>
                                 </div>
@@ -1938,6 +1938,24 @@
                         <div class="bookshelf-divider" aria-hidden="true"></div>
 
                         <!-- ▼ 既刊（書庫） -->
+                        <article class="book book--forest"
+                                 onclick="openPaperModal(this)"
+                                 onmouseenter="showBookPreview(this)"
+                                 onmouseleave="hideBookPreview()"
+                                 onfocus="showBookPreview(this)"
+                                 onblur="hideBookPreview()"
+                                 data-paper="spinalscore"
+                                 role="button" tabindex="0"
+                                 aria-label="Predictive Score for SCI の論文解説を読む">
+                            <div class="book-spine">
+                                <div class="spine-band spine-band--top"></div>
+                                <div class="spine-top">J Vasc Surg · 2025</div>
+                                <div class="spine-title">Predictive Score for SCI after TAAA Repair</div>
+                                <div class="spine-bottom">Commentary</div>
+                                <div class="spine-band spine-band--bottom"></div>
+                            </div>
+                        </article>
+
                         <article class="book book--wine"
                                  onclick="openPaperModal(this)"
                                  onmouseenter="showBookPreview(this)"
@@ -2259,6 +2277,14 @@
                 doi: "https://www.clinicalkey.jp/#!/content/journal/1-s2.0-S0741521425018889",
                 summary: `<p class="mb-6 text-[14.5px] leading-relaxed">2016-2020年 TAAA open repair 246例の単施設後ろ向き研究。6術前変数（Extent II, BMI≥30, 喫煙歴, CKD, 年齢&gt;70, 利尿薬使用）で0-6点スコアを作成。SCI率：スコア0=0%, 1=1.1%, 2=8.5%, 3=53.3%, 4-5=100%。カットオフ≥2で感度92.1%, 特異度78.9%, NPV 98.3%, AUC 0.902。1点増加あたりOR 7.16。</p><div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm"><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">KEY FINDINGS</div><div class="space-y-3"><div><strong>SCI発生率</strong>: 13.4% (33/246)</div><div><strong>AUC</strong>: 0.902 (optimism-corrected)</div></div></div><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">当センター比較</div><div class="space-y-2"><div>SCI率: 2% (vs 13.4%)</div><div>外部検証価値高</div></div></div></div>`,
                 commentary: `<p><span class="inline-block text-[10px] bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">原論文より</span>簡便な術前6変数スコアでTAAA後SCIを良好に予測。内部検証で高性能。</p><div class="highlight-box"><strong>川崎幸病院ACとの比較</strong><br>当センターSCI率2%は本研究13.4%より大幅に低い。<br>Extent II＋利尿薬使用でSCI率35.3%と注目。<br>6変数は当センターでも容易に追跡可能。</div><p><span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">大島の私見</span>術前カンファでのリスク層別化・患者説明・神経保護戦略強化に即活用可能。当センターデータでの外部検証を検討すべき最重要論文。</p>`
+            },
+            pulmonary: {
+                journal: "Journal of Vascular Surgery",
+                citation: "2025;82(3):e83",
+                title: "Preoperative Predictors of Pulmonary Complications After Open Thoracoabdominal Aortic Aneurysm Repair",
+                doi: "https://www.clinicalkey.jp/#!/content/journal/1-s2.0-S074152142501208X",
+                summary: `<p class="mb-6 text-[14.5px] leading-relaxed">Mayo Clinicの単施設後ろ向き研究（2013-2024年）。Open TAAA修復112例（135例中、緊急手術・術中死亡・記録不備を除外）を対象に、術後呼吸器合併症（PC: 48時間以上の人工呼吸、肺炎、再挿管、気管切開のいずれか）の術前予測因子を多変量ロジスティック回帰で同定し、リスクスコアを作成。</p><div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm"><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">PATIENT PROFILE</div><div class="space-y-3"><div><strong>平均年齢</strong>: 54 ± 13歳（21-78歳）</div><div><strong>男性</strong>: 69%</div><div><strong>COPD</strong>: 22%</div><div><strong>喫煙歴あり</strong>: 65%</div><div><strong>Extent II TAAA</strong>: 76%</div></div></div><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">PRIMARY OUTCOMES</div><div class="space-y-3"><div><strong>PC発生率</strong>: 38% (42/112)</div><div><strong>早期死亡</strong>: 5%</div><div><strong>在院日数中央値</strong>: 14日（IQR 11-19）</div><div><strong>C-statistic</strong>: 0.83</div></div></div></div><div class="mt-6 pt-4 border-t border-zinc-200"><div class="text-zinc-400 text-xs mb-3 tracking-wider">RISK SCORE — 多変量解析の予測因子</div><div class="text-sm space-y-1.5"><div>① <strong>FEV1低下</strong> — OR 0.39 (95%CI 0.16–0.92), <em>P</em>=.03</div><div>② <strong>FEV1/FVC比低下</strong> — OR 0.96 (95%CI 0.93–0.99), <em>P</em>=.03</div><div>③ <strong>高脂血症</strong> — OR 6.41 (95%CI 1.56–26.37), <em>P</em>=.01</div><div>④ <strong>eGFR低下</strong> — OR 0.96 (95%CI 0.92–1.01), <em>P</em>=.08</div></div></div>`,
+                commentary: `<p><span class="inline-block text-[10px] bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">原論文より</span>術前肺機能検査（FEV1・FEV1/FVC）と臨床属性（高脂血症・eGFR）を組み込んだリスクスコアモデルで、Open TAAA 術後の呼吸器合併症を C-statistic 0.83 と良好な識別能で予測可能。Letter to Editor 形式。</p><div class="highlight-box"><strong>意外な所見：高脂血症が最強の予測因子</strong><br>OR 6.41 と他因子を大きく上回る。年齢や COPD 診断名よりも、<strong>実測の肺機能パラメータ</strong>が強い予測力を示した点が臨床的に重要（平均54歳と比較的若い集団のため）。背景に炎症・免疫関連メカニズムが推測される。</div><p><span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">大島の私見</span><strong>論文の限界</strong>：Letter 形式のため、(1) 以前の呼吸器手術・開胸歴（胸腔内癒着→肺損傷リスク）、(2) 再手術症例（剥離による肺損傷、手術時間延長）、(3) 肺気腹の重症度 — といった重要因子が解析・記載されていない。Extent II 76%の集団では多くが解離後瘤や先行 TEVAR 後と推測されるが詳細不明。Full article での確認が必要。</p><p><span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">大島の私見</span>術前肺機能評価の重要性を裏付ける一報。<strong>川崎幸病院大動脈センターでも術前 FEV1・FEV1/FVC を全例で評価しており</strong>、本スコアの当センターデータでの外部検証を検討する価値は高い。高脂血症の関与は、術前脂質コントロールや抗炎症戦略を含めた周術期管理の見直しにもつながる示唆。</p>`
             }
         };
 
@@ -2278,6 +2304,11 @@
                 eyebrow: "J Vasc Surg · 2025 (in press)",
                 title: "A Predictive Score for Spinal Cord Ischemia after Open TAAA Repair",
                 text: "TAAA open repair 246例の6変数術前リスクスコア（Extent II / BMI≥30 / 喫煙 / CKD / 年齢>70 / 利尿薬）。スコア≥2でSCI感度92.1%・AUC 0.902。当センターSCI率2%との比較と、外部検証の検討を含む考察。"
+            },
+            pulmonary: {
+                eyebrow: "J Vasc Surg · 2025;82(3):e83",
+                title: "Preoperative Predictors of Pulmonary Complications after Open TAAA Repair",
+                text: "Mayo Clinic単施設112例（2013-2024年）の後ろ向き研究。呼吸器合併症発生率38%。多変量解析で FEV1、FEV1/FVC比、高脂血症、eGFR低下を予測因子と同定（C-statistic 0.83）。意外な点として高脂血症が OR 6.41 と最強因子。当センターへの応用と Letter 形式の限界を考察。"
             }
         };
 
