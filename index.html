@@ -801,9 +801,123 @@
         .book-spine .spine-band--bottom { top: 78%; }
 
         /* 本のカラーバリエーション */
-        .book--navy   .book-spine { background: linear-gradient(180deg, #1f3a5f 0%, #0f4c81 50%, #0a3458 100%); }
-        .book--wine   .book-spine { background: linear-gradient(180deg, #5e1a1a 0%, #7b1d1d 50%, #4a1313 100%); }
-        .book--forest .book-spine { background: linear-gradient(180deg, #1d3d2e 0%, #2d6a4f 50%, #15301f 100%); }
+        .book--navy     .book-spine { background: linear-gradient(180deg, #1f3a5f 0%, #0f4c81 50%, #0a3458 100%); }
+        .book--wine     .book-spine { background: linear-gradient(180deg, #5e1a1a 0%, #7b1d1d 50%, #4a1313 100%); }
+        .book--forest   .book-spine { background: linear-gradient(180deg, #1d3d2e 0%, #2d6a4f 50%, #15301f 100%); }
+        .book--charcoal .book-spine { background: linear-gradient(180deg, #2a2a2e 0%, #3f3f46 50%, #18181b 100%); }
+        .book--ivory    .book-spine { background: linear-gradient(180deg, #d9cdb0 0%, #e8dec3 50%, #b9a677 100%); color: #2a2010; }
+        .book--ivory    .spine-title { color: #2a2010 !important; }
+        .book--ivory    .spine-top,
+        .book--ivory    .spine-bottom { color: rgba(120, 88, 30, 0.85) !important; }
+        .book--plum     .book-spine { background: linear-gradient(180deg, #3d1a3d 0%, #5d2d5d 50%, #2a112a 100%); }
+
+        /* 新刊コーナー */
+        .latest-corner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+            margin-right: 8px;
+            transform-style: preserve-3d;
+        }
+        .latest-label {
+            font-size: 9px;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: rgba(218, 188, 122, 0.85);
+            font-weight: 700;
+            margin-bottom: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .latest-label::before,
+        .latest-label::after {
+            content: '';
+            width: 18px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(218, 188, 122, 0.6), transparent);
+        }
+        .book.book--featured {
+            transform: rotateY(-10deg) translateZ(35px);
+        }
+        .book.book--featured:hover,
+        .book.book--featured:focus-visible {
+            transform: rotateY(-2deg) translateY(-32px) translateZ(80px);
+        }
+        .book.book--featured .book-spine {
+            box-shadow:
+                inset -4px 0 8px rgba(0,0,0,0.4),
+                inset 3px 0 5px rgba(255,255,255,0.12),
+                4px 6px 24px rgba(218, 188, 122, 0.3),
+                4px 6px 20px rgba(0,0,0,0.55);
+        }
+        .book-ribbon {
+            position: absolute;
+            top: 8px;
+            right: -6px;
+            z-index: 4;
+            background: linear-gradient(135deg, #d4af37 0%, #c09b2a 50%, #9a7a1c 100%);
+            color: #1a1410;
+            font-size: 8.5px;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            padding: 4px 9px 4px 7px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.4);
+            transform: rotate(2deg);
+            border-radius: 1px;
+        }
+        .book-ribbon::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            right: 0;
+            border: 4px solid transparent;
+            border-top-color: #7a5e16;
+            border-right-color: #7a5e16;
+        }
+        .book-spotlight {
+            position: absolute;
+            bottom: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 130%;
+            height: 24px;
+            background: radial-gradient(ellipse, rgba(218, 188, 122, 0.45) 0%, transparent 65%);
+            pointer-events: none;
+            filter: blur(6px);
+            z-index: 0;
+        }
+
+        /* 新刊と既刊の間の仕切り */
+        .bookshelf-divider {
+            position: relative;
+            width: 32px;
+            flex-shrink: 0;
+            align-self: stretch;
+        }
+        .bookshelf-divider::before {
+            content: '';
+            position: absolute;
+            top: 35%;
+            bottom: 0;
+            left: 50%;
+            width: 1px;
+            background: linear-gradient(180deg, transparent 0%, rgba(218, 188, 122, 0.25) 50%, transparent 100%);
+        }
+        .bookshelf-divider::after {
+            content: 'LIBRARY';
+            position: absolute;
+            top: 18%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 7.5px;
+            letter-spacing: 0.32em;
+            color: rgba(218, 188, 122, 0.55);
+            font-weight: 600;
+            white-space: nowrap;
+            writing-mode: vertical-rl;
+        }
 
         /* 本棚の板（下部） */
         .shelf-board {
@@ -1796,24 +1910,34 @@
 
                 <div class="bookshelf">
                     <div class="books-row">
-                        <article class="book book--navy"
-                                 onclick="openPaperModal(this)"
-                                 onmouseenter="showBookPreview(this)"
-                                 onmouseleave="hideBookPreview()"
-                                 onfocus="showBookPreview(this)"
-                                 onblur="hideBookPreview()"
-                                 data-paper="fellowship"
-                                 role="button" tabindex="0"
-                                 aria-label="Cardiothoracic Surgery Fellowship の論文解説を読む">
-                            <div class="book-spine">
-                                <div class="spine-band spine-band--top"></div>
-                                <div class="spine-top">Ann Thorac Surg · 2026</div>
-                                <div class="spine-title">CT Surgery Fellowship — Reapplicants &amp; Match Rates</div>
-                                <div class="spine-bottom">Commentary</div>
-                                <div class="spine-band spine-band--bottom"></div>
-                            </div>
-                        </article>
+                        <!-- ▼ 新刊コーナー（最新の1冊） -->
+                        <div class="latest-corner">
+                            <div class="latest-label">Latest Reading · 新刊</div>
+                            <article class="book book--forest book--featured"
+                                     onclick="openPaperModal(this)"
+                                     onmouseenter="showBookPreview(this)"
+                                     onmouseleave="hideBookPreview()"
+                                     onfocus="showBookPreview(this)"
+                                     onblur="hideBookPreview()"
+                                     data-paper="spinalscore"
+                                     role="button" tabindex="0"
+                                     aria-label="新刊：Predictive Score for SCI の論文解説を読む">
+                                <div class="book-ribbon">NEW</div>
+                                <div class="book-spotlight"></div>
+                                <div class="book-spine">
+                                    <div class="spine-band spine-band--top"></div>
+                                    <div class="spine-top">J Vasc Surg · 2025</div>
+                                    <div class="spine-title">Predictive Score for SCI after TAAA Repair</div>
+                                    <div class="spine-bottom">Commentary</div>
+                                    <div class="spine-band spine-band--bottom"></div>
+                                </div>
+                            </article>
+                        </div>
 
+                        <!-- ▼ 仕切り -->
+                        <div class="bookshelf-divider" aria-hidden="true"></div>
+
+                        <!-- ▼ 既刊（書庫） -->
                         <article class="book book--wine"
                                  onclick="openPaperModal(this)"
                                  onmouseenter="showBookPreview(this)"
@@ -1832,19 +1956,19 @@
                             </div>
                         </article>
 
-                        <article class="book book--forest"
+                        <article class="book book--navy"
                                  onclick="openPaperModal(this)"
                                  onmouseenter="showBookPreview(this)"
                                  onmouseleave="hideBookPreview()"
                                  onfocus="showBookPreview(this)"
                                  onblur="hideBookPreview()"
-                                 data-paper="spinalscore"
+                                 data-paper="fellowship"
                                  role="button" tabindex="0"
-                                 aria-label="Spinal cord ischemia predictive score の論文解説を読む">
+                                 aria-label="Cardiothoracic Surgery Fellowship の論文解説を読む">
                             <div class="book-spine">
                                 <div class="spine-band spine-band--top"></div>
-                                <div class="spine-top">J Vasc Surg · 2025</div>
-                                <div class="spine-title">Predictive Score for SCI after TAAA Repair</div>
+                                <div class="spine-top">Ann Thorac Surg · 2026</div>
+                                <div class="spine-title">CT Surgery Fellowship — Reapplicants &amp; Match Rates</div>
                                 <div class="spine-bottom">Commentary</div>
                                 <div class="spine-band spine-band--bottom"></div>
                             </div>
