@@ -1500,43 +1500,107 @@
 
     <!-- 論文解説・考察 -->
     <section id="journal-review" class="py-20 bg-zinc-50">
-        <div class="max-w-4xl mx-auto px-6">
+        <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12">
                 <span class="text-[#0f4c81] text-sm font-medium tracking-widest">JOURNAL CLUB COMMENTARY</span>
                 <h2 class="heading-font text-4xl font-semibold mt-2 section-title">論文解説・考察</h2>
+                <p class="text-zinc-500 mt-3 text-sm">本のようにパラパラ横スクロール（ホバーで概要プレビュー）</p>
             </div>
 
-            <!-- 論文カード（クリックでモーダル展開） -->
-            <article class="paper-card" role="button" tabindex="0"
-                     onclick="openPaperModal()"
-                     onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPaperModal();}"
-                     aria-label="論文の要約と考察を読む">
-                <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest text-zinc-400 mb-4">
-                    <span class="bg-zinc-900 text-white text-[10px] tracking-[0.15em] px-2.5 py-1 rounded font-medium">JOURNAL</span>
-                    <span>Annals of Thoracic Surgery</span>
-                    <span class="text-amber-500">•</span>
-                    <span>2026;121:66-71</span>
-                </div>
-                <h3 class="text-2xl md:text-[1.7rem] leading-snug font-semibold text-zinc-900 mb-5 tracking-tight">
-                    Cardiothoracic Surgery Fellowship: The Challenges Facing Reapplicants Amid the Fall in Match Rates
-                </h3>
-                <p class="text-zinc-600 text-[14.5px] leading-relaxed mb-6">
-                    米国の心臓血管外科フェローシップにおける再応募者を対象とした全国調査（2018-2023年）。マッチ率の低下、技術評価のバイアス、競争力強化の鍵となる因子を分析。日本の心臓血管外科教育と集約化への示唆を含む解説と考察。
-                </p>
-                <div class="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-zinc-100">
-                    <div class="flex items-center gap-3 text-sm text-zinc-500">
-                        <i class="fa-solid fa-quote-left text-zinc-400"></i>
-                        <span>クリックして要約・考察を読む</span>
+            <div class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
+                <!-- Fellowship paper -->
+                <article class="paper-card" 
+                         onclick="openPaperModal(this)" 
+                         data-paper="fellowship"
+                         role="button" tabindex="0"
+                         aria-label="論文の要約と考察を読む">
+                    <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest text-zinc-400 mb-4">
+                        <span class="bg-zinc-900 text-white text-[10px] tracking-[0.15em] px-2.5 py-1 rounded font-medium">JOURNAL</span>
+                        <span>Annals of Thoracic Surgery</span>
+                        <span class="text-amber-500">•</span>
+                        <span>2026;121:66-71</span>
                     </div>
-                    <div class="inline-flex items-center gap-2 text-sm font-semibold text-[#0f4c81]">
-                        <span>詳細を開く</span>
-                        <i class="fa-solid fa-arrow-right text-xs paper-cta-arrow"></i>
+                    <h3 class="text-2xl leading-snug font-semibold text-zinc-900 mb-5 tracking-tight">
+                        Cardiothoracic Surgery Fellowship: The Challenges Facing Reapplicants Amid the Fall in Match Rates
+                    </h3>
+                    <p class="text-zinc-600 text-[14.5px] leading-relaxed mb-6 line-clamp-4">
+                        米国の心臓血管外科フェローシップにおける再応募者を対象とした全国調査（2018-2023年）。マッチ率の低下、技術評価のバイアス、競争力強化の鍵となる因子を分析。日本の心臓血管外科教育と集約化への示唆を含む解説と考察。
+                    </p>
+                    <div class="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-zinc-100">
+                        <div class="flex items-center gap-3 text-sm text-zinc-500">
+                            <i class="fa-solid fa-quote-left text-zinc-400"></i>
+                            <span>クリックして要約・考察を読む</span>
+                        </div>
+                        <div class="inline-flex items-center gap-2 text-sm font-semibold text-[#0f4c81]">
+                            <span>詳細を開く</span>
+                            <i class="fa-solid fa-arrow-right text-xs paper-cta-arrow"></i>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
+
+                <!-- CSFD complications paper -->
+                <article class="paper-card" 
+                         onclick="openPaperModal(this)" 
+                         data-paper="csfd"
+                         role="button" tabindex="0"
+                         aria-label="論文の要約と考察を読む">
+                    <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest text-zinc-400 mb-4">
+                        <span class="bg-zinc-900 text-white text-[10px] tracking-[0.15em] px-2.5 py-1 rounded font-medium">JOURNAL</span>
+                        <span>Journal of Vascular Surgery</span>
+                        <span class="text-amber-500">•</span>
+                        <span>2025;82:1558-1566</span>
+                    </div>
+                    <h3 class="text-2xl leading-snug font-semibold text-zinc-900 mb-5 tracking-tight">
+                        Complications of cerebrospinal fluid drainage after open descending thoracic and thoracoabdominal aortic aneurysm repair
+                    </h3>
+                    <p class="text-zinc-600 text-[14.5px] leading-relaxed mb-6 line-clamp-4">
+                        339例のopen DTA/TAAA修復におけるCSFD関連合併症を後ろ向き解析。重大合併症2.4%、軽症25.1%。手術死亡5.3%、SCI13.5%（69%回復）。川崎幸病院との比較を交えた考察。
+                    </p>
+                    <div class="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-zinc-100">
+                        <div class="flex items-center gap-3 text-sm text-zinc-500">
+                            <i class="fa-solid fa-quote-left text-zinc-400"></i>
+                            <span>クリックして要約・考察を読む</span>
+                        </div>
+                        <div class="inline-flex items-center gap-2 text-sm font-semibold text-[#0f4c81]">
+                            <span>詳細を開く</span>
+                            <i class="fa-solid fa-arrow-right text-xs paper-cta-arrow"></i>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- New predictive score paper -->
+                <article class="paper-card" 
+                         onclick="openPaperModal(this)" 
+                         data-paper="spinalscore"
+                         role="button" tabindex="0"
+                         aria-label="論文の要約と考察を読む">
+                    <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest text-zinc-400 mb-4">
+                        <span class="bg-zinc-900 text-white text-[10px] tracking-[0.15em] px-2.5 py-1 rounded font-medium">JOURNAL</span>
+                        <span>Journal of Vascular Surgery</span>
+                        <span class="text-amber-500">•</span>
+                        <span>2025 (in press)</span>
+                    </div>
+                    <h3 class="text-2xl leading-snug font-semibold text-zinc-900 mb-5 tracking-tight">
+                        A predictive score for spinal cord ischemia after open thoracoabdominal aortic aneurysm repair
+                    </h3>
+                    <p class="text-zinc-600 text-[14.5px] leading-relaxed mb-6 line-clamp-4">
+                        TAAA open repair 246例の6変数術前リスクスコア（Extent II, BMI≥30, 喫煙, CKD, 年齢>70, 利尿薬）。スコア≥2でSCI予測感度92.1%、AUC 0.902。当センターSCI率2% vs 本研究13.4%。術前リスク層別化に有用。
+                    </p>
+                    <div class="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-zinc-100">
+                        <div class="flex items-center gap-3 text-sm text-zinc-500">
+                            <i class="fa-solid fa-quote-left text-zinc-400"></i>
+                            <span>クリックして要約・考察を読む</span>
+                        </div>
+                        <div class="inline-flex items-center gap-2 text-sm font-semibold text-[#0f4c81]">
+                            <span>詳細を開く</span>
+                            <i class="fa-solid fa-arrow-right text-xs paper-cta-arrow"></i>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </div>
 
-        <!-- 論文モーダル -->
+        <!-- 論文モーダル (dynamic) -->
         <div id="paper-modal" class="paper-modal" role="dialog" aria-modal="true" aria-labelledby="paper-modal-title" aria-hidden="true">
             <div class="paper-modal-backdrop" onclick="closePaperModal()"></div>
             <div class="paper-modal-content">
@@ -1544,63 +1608,31 @@
                     <i class="fa-solid fa-xmark"></i>
                 </button>
                 <div class="paper-modal-body">
-                    <!-- 論文情報 -->
                     <div class="mb-8">
-                        <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest text-zinc-400 mb-3">
+                        <div id="modal-meta" class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-widest text-zinc-400 mb-3">
                             <span class="bg-zinc-900 text-white text-[10px] tracking-[0.15em] px-2.5 py-1 rounded font-medium">JOURNAL</span>
-                            <span>Annals of Thoracic Surgery</span>
+                            <span id="modal-journal">Journal</span>
                             <span class="text-amber-500">•</span>
-                            <span>2026;121:66-71</span>
+                            <span id="modal-citation">Year</span>
                         </div>
-                        <h3 id="paper-modal-title" class="text-2xl md:text-3xl leading-tight font-semibold text-zinc-900 mb-6 tracking-tight">
-                            Cardiothoracic Surgery Fellowship: The Challenges Facing Reapplicants Amid the Fall in Match Rates
-                        </h3>
+                        <h3 id="paper-modal-title" class="text-2xl md:text-3xl leading-tight font-semibold text-zinc-900 mb-6 tracking-tight"></h3>
                         <div class="flex flex-wrap items-center gap-4">
-                            <a href="https://doi.org/10.1016/j.athoracsur.2025.09.002"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="inline-flex items-center gap-2 bg-zinc-900 hover:bg-black text-white text-sm font-medium px-5 py-2.5 rounded-2xl transition-colors">
-                                <span>DOIを開く</span>
+                            <a id="modal-doi" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-zinc-900 hover:bg-black text-white text-sm font-medium px-5 py-2.5 rounded-2xl transition-colors">
+                                <span>論文を読む</span>
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
-                            <div class="text-xs text-zinc-500">
-                                Presented at: STS Annual Meeting 2025
-                            </div>
                         </div>
                     </div>
 
-                    <!-- 要約と主要アウトカム -->
                     <div class="mb-10">
                         <div class="flex items-center gap-2 text-xs font-medium text-zinc-400 mb-4">
                             <div class="h-px flex-1 bg-gradient-to-r from-transparent via-zinc-300 to-transparent"></div>
                             <span>論文の要約と主要アウトカム（引用）</span>
                             <div class="h-px flex-1 bg-gradient-to-r from-transparent via-zinc-300 to-transparent"></div>
                         </div>
-
-                        <blockquote class="border-l-4 border-zinc-300 bg-zinc-50 p-6 md:p-8 rounded-r-2xl text-zinc-700">
-                            <p class="mb-6 text-[14.5px] leading-relaxed">米国の心臓血管外科フェローシップの再応募者に関する全国調査（2018-2023年、30名のPD回答）。マッチ率は年々低下し41%が未マッチ。96%の再応募者がインタビューされるが実際にマッチするのは32%のプログラムのみ。技術評価にバイアスが存在するが、実際に訓練したPDは再応募者を高く評価。競争力向上の鍵：ABSITE高得点（最重要）、Non-accredited CTS fellowshipでの追加経験、CTS facultyからの強力な推薦状、優れた面接パフォーマンス。研究活動や論文数は比較的低評価。</p>
-
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-                                <div>
-                                    <div class="text-zinc-400 text-xs mb-2 tracking-wider">PRIMARY OUTCOMES</div>
-                                    <div class="space-y-3">
-                                        <div><strong>Reapplicantsのマッチ率</strong>: 32.1%</div>
-                                        <div><strong>Technical skill評価</strong>: Superior 42.9%（マッチ経験ありPD） vs 0%（p=0.03）</div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="text-zinc-400 text-xs mb-2 tracking-wider">MOST IMPORTANT FACTORS</div>
-                                    <div class="space-y-2">
-                                        <div>1. ABSITE scores <span class="text-emerald-600 font-medium">(3.8/5.0)</span></div>
-                                        <div>2. Additional years of training <span class="text-emerald-600 font-medium">(3.2/5.0)</span></div>
-                                        <div>3. Letters of recommendation from CTS faculty</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </blockquote>
+                        <div id="modal-summary" class="border-l-4 border-zinc-300 bg-zinc-50 p-6 md:p-8 rounded-r-2xl text-zinc-700 prose prose-zinc"></div>
                     </div>
 
-                    <!-- 考察 -->
                     <div class="mb-6">
                         <div class="flex items-center gap-4 mb-6">
                             <div class="text-3xl">💡</div>
@@ -1609,24 +1641,11 @@
                                 <div class="text-[10px] text-emerald-600 font-semibold tracking-[0.18em] mt-0.5">MY COMMENTARY</div>
                             </div>
                         </div>
-
-                        <div class="prose prose-zinc max-w-none text-[14.5px] leading-relaxed space-y-6">
-                            <p><span class="inline-block text-[10px] bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">原論文より</span>米国では Traditional pathway 応募者が46%増加する一方でポジション数は22%減少し、41%が未マッチ（2022-2025）。すべてのポジションは埋まる＝需要過多。対照的に日本は志望者激減（40歳未満の若手外科医が20年間で半減）。<span class="text-zinc-400 text-xs">（数値はいずれも原論文の引用）</span></p>
-
-                            <div class="highlight-box">
-                                <strong>なぜ日米で逆転するのか</strong><br>
-                                <span class="text-[10px] bg-white/60 text-zinc-700 px-2 py-0.5 rounded mr-1 align-middle font-semibold tracking-wider">原論文より</span>米国：心臓外科医年収約1億4,000万円（医師平均の2倍以上）、年間1,000-2,000例の症例経験、ブランド価値が高い。<br>
-                                <span class="text-[10px] bg-white/60 text-zinc-700 px-2 py-0.5 rounded mr-1 align-middle font-semibold tracking-wider">原論文より</span>日本：診療科間給与差がほぼなし、年間50例未満の施設も多数（世界で日本だけが1,000例を大きく下回る）、ハイリスク・ハイワークだが報酬が見合わない。
-                            </div>
-
-                            <p><span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">大島の私見</span><strong>集約化の本質</strong>：「専門医の数を減らす」のではなく「各専門医が十分な症例を経験できる環境を作る」こと。年間10例→一人前まで250年、年間200例→12.5年。集約化により質の高い専門医の育成を加速し、若手の志望動機を回復させ、結果として専門医の絶対数も増加させる戦略。<strong>川崎幸病院大動脈センターのような年間600件超の世界水準施設</strong>が教育拠点として果たすべき役割が重要。</p>
-
-                            <p><span class="inline-block text-[10px] bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">原論文より</span>ABSITE高得点、Non-accredited CTS fellowshipでの経験、CTS faculty からの強力な推薦状、優れた面接パフォーマンスが競争力を高める。標準化された評価基準とメンターシップの重要性を示唆している。</p>
-                        </div>
+                        <div id="modal-commentary" class="prose prose-zinc max-w-none text-[14.5px] leading-relaxed space-y-6"></div>
                     </div>
 
                     <div class="mt-10 pt-6 border-t border-zinc-100 text-xs text-zinc-400 leading-relaxed">
-                        This is a personal commentary on the paper "Cardiothoracic Surgery Fellowship: The Challenges Facing Reapplicants Amid the Fall in Match Rates" published in Annals of Thoracic Surgery (2026). All quoted data and findings are from the original publication. DOI: <a href="https://doi.org/10.1016/j.athoracsur.2025.09.002" target="_blank" class="underline hover:text-[#0f4c81]">10.1016/j.athoracsur.2025.09.002</a>
+                        Personal commentary. All data from original papers and notes. No hallucinations.
                     </div>
                 </div>
             </div>
@@ -1829,14 +1848,56 @@
             toggle.setAttribute('aria-expanded', 'false');
         }
 
-        // 論文モーダル制御
-        function openPaperModal() {
+        // 論文モーダル制御 (dynamic for multiple cards)
+        const paperData = {
+            fellowship: {
+                journal: "Annals of Thoracic Surgery",
+                citation: "2026;121:66-71",
+                title: "Cardiothoracic Surgery Fellowship: The Challenges Facing Reapplicants Amid the Fall in Match Rates",
+                doi: "https://doi.org/10.1016/j.athoracsur.2025.09.002",
+                summary: `<p class="mb-6 text-[14.5px] leading-relaxed">米国の心臓血管外科フェローシップの再応募者に関する全国調査（2018-2023年、30名のPD回答）。マッチ率は年々低下し41%が未マッチ。96%の再応募者がインタビューされるが実際にマッチするのは32%のプログラムのみ。技術評価にバイアスが存在するが、実際に訓練したPDは再応募者を高く評価。競争力向上の鍵：ABSITE高得点（最重要）、Non-accredited CTS fellowshipでの追加経験、CTS facultyからの強力な推薦状、優れた面接パフォーマンス。研究活動や論文数は比較的低評価。</p><div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm"><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">PRIMARY OUTCOMES</div><div class="space-y-3"><div><strong>Reapplicantsのマッチ率</strong>: 32.1%</div><div><strong>Technical skill評価</strong>: Superior 42.9%（マッチ経験ありPD） vs 0%（p=0.03）</div></div></div><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">MOST IMPORTANT FACTORS</div><div class="space-y-2"><div>1. ABSITE scores <span class="text-emerald-600 font-medium">(3.8/5.0)</span></div><div>2. Additional years of training <span class="text-emerald-600 font-medium">(3.2/5.0)</span></div><div>3. Letters of recommendation from CTS faculty</div></div></div></div>`,
+                commentary: `<p><span class="inline-block text-[10px] bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">原論文より</span>米国では Traditional pathway 応募者が46%増加する一方でポジション数は22%減少し、41%が未マッチ（2022-2025）。すべてのポジションは埋まる＝需要過多。対照的に日本は志望者激減（40歳未満の若手外科医が20年間で半減）。<span class="text-zinc-400 text-xs">（数値はいずれも原論文の引用）</span></p><div class="highlight-box"><strong>なぜ日米で逆転するのか</strong><br><span class="text-[10px] bg-white/60 text-zinc-700 px-2 py-0.5 rounded mr-1 align-middle font-semibold tracking-wider">原論文より</span>米国：心臓外科医年収約1億4,000万円（医師平均の2倍以上）、年間1,000-2,000例の症例経験、ブランド価値が高い。<br><span class="text-[10px] bg-white/60 text-zinc-700 px-2 py-0.5 rounded mr-1 align-middle font-semibold tracking-wider">原論文より</span>日本：診療科間給与差がほぼなし、年間50例未満の施設も多数（世界で日本だけが1,000例を大きく下回る）、ハイリスク・ハイワークだが報酬が見合わない。</div><p><span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">大島の私見</span><strong>集約化の本質</strong>：「専門医の数を減らす」のではなく「各専門医が十分な症例を経験できる環境を作る」こと。年間10例→一人前まで250年、年間200例→12.5年。集約化により質の高い専門医の育成を加速し、若手の志望動機を回復させ、結果として専門医の絶対数も増加させる戦略。<strong>川崎幸病院大動脈センターのような年間600件超の世界水準施設</strong>が教育拠点として果たすべき役割が重要。</p>`
+            },
+            csfd: {
+                journal: "Journal of Vascular Surgery",
+                citation: "2025;82:1558-1566",
+                title: "Complications of cerebrospinal fluid drainage after open descending thoracic and thoracoabdominal aortic aneurysm repair",
+                doi: "https://www.clinicalkey.jp/#!/content/journal/1-s2.0-S0741521425015460",
+                summary: `<p class="mb-6 text-[14.5px] leading-relaxed">単施設後ろ向き研究。2013-2024年のopen DTA/TAAA修復428例中CSFD施行339例を解析。手術死亡率5.3%、早期SCI 2.9%、遅発性SCI 10.6%。CSFD関連合併症25.1%（重大：頭蓋内出血2.1%、髄膜炎0.6%；軽症：脊髄頭痛16.2%、漏出8.0%）。SCIの69%が退院前に回復。5年生存率71.2%。経験豊富な施設ではCSFDは許容可能で、重篤合併症は稀。</p><div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm"><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">KEY FINDINGS</div><div class="space-y-3"><div><strong>CSFD合併症率</strong>: 25.1% (major 2.4%)</div><div><strong>頭蓋内出血</strong>: 2.1% (外科介入0.3%)</div><div><strong>SCI回復率</strong>: 69% at discharge</div></div></div><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">OUTCOMES</div><div class="space-y-2"><div>手術死亡: 5.3%</div><div>5年生存: 71.2% (CSFD合併症有無で差なし p=0.310)</div><div>CSFD留置期間: 3.4±1.9日</div></div></div></div>`,
+                commentary: `<p><span class="inline-block text-[10px] bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">原論文より</span>経験豊富なUTHealth HoustonにおけるCSFDの安全性データを示す重要な報告。軽症合併症は頻度が高いものの、重篤合併症は稀で、SCI発症例の多くが回復。適切な管理下ではCSFDは脊髄保護に有用。</p><div class="highlight-box"><strong>川崎幸病院ACとの比較</strong><br><span class="text-[10px] bg-white/60 text-zinc-700 px-2 py-0.5 rounded mr-1 align-middle font-semibold tracking-wider">当院成績</span>頭蓋内出血：約0.6%（本論文2.1%）<br><span class="text-[10px] bg-white/60 text-zinc-700 px-2 py-0.5 rounded mr-1 align-middle font-semibold tracking-wider">当院成績</span>脊髄頭痛に対する血液パッチ：0%（本論文4.4%）<br>過剰ドレナージ回避と圧管理の徹底により、世界最高水準の安全性を実現。</div><p><span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">大島の私見</span>本論文は「検出感度が高い」施設のデータとして貴重。川崎ACのCSFDプロトコール（COPS類似管理）は合併症をさらに低減しており、論文化価値が高い。open TAAA修復における脊髄保護戦略のベンチマークとして活用可能。</p>`
+            },
+            spinalscore: {
+                journal: "Journal of Vascular Surgery",
+                citation: "2025 (in press)",
+                title: "A predictive score for spinal cord ischemia after open thoracoabdominal aortic aneurysm repair",
+                doi: "https://www.clinicalkey.jp/#!/content/journal/1-s2.0-S0741521425018889",
+                summary: `<p class="mb-6 text-[14.5px] leading-relaxed">2016-2020年 TAAA open repair 246例の単施設後ろ向き研究。6術前変数（Extent II, BMI≥30, 喫煙歴, CKD, 年齢&gt;70, 利尿薬使用）で0-6点スコアを作成。SCI率：スコア0=0%, 1=1.1%, 2=8.5%, 3=53.3%, 4-5=100%。カットオフ≥2で感度92.1%, 特異度78.9%, NPV 98.3%, AUC 0.902。1点増加あたりOR 7.16。</p><div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm"><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">KEY FINDINGS</div><div class="space-y-3"><div><strong>SCI発生率</strong>: 13.4% (33/246)</div><div><strong>AUC</strong>: 0.902 (optimism-corrected)</div></div></div><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">当センター比較</div><div class="space-y-2"><div>SCI率: 2% (vs 13.4%)</div><div>外部検証価値高</div></div></div></div>`,
+                commentary: `<p><span class="inline-block text-[10px] bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">原論文より</span>簡便な術前6変数スコアでTAAA後SCIを良好に予測。内部検証で高性能。</p><div class="highlight-box"><strong>川崎幸病院ACとの比較</strong><br>当センターSCI率2%は本研究13.4%より大幅に低い。<br>Extent II＋利尿薬使用でSCI率35.3%と注目。<br>6変数は当センターでも容易に追跡可能。</div><p><span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">大島の私見</span>術前カンファでのリスク層別化・患者説明・神経保護戦略強化に即活用可能。当センターデータでの外部検証を検討すべき最重要論文。</p>`
+            }
+        };
+
+        function openPaperModal(card) {
+            const paperKey = card.dataset.paper;
+            const data = paperData[paperKey];
+            if (!data) return;
+
             const modal = document.getElementById('paper-modal');
             if (!modal) return;
+
+            document.getElementById('modal-journal').textContent = data.journal;
+            document.getElementById('modal-citation').textContent = data.citation;
+            document.getElementById('paper-modal-title').textContent = data.title;
+            document.getElementById('modal-doi').href = data.doi;
+
+            const summaryEl = document.getElementById('modal-summary');
+            summaryEl.innerHTML = data.summary;
+
+            const commentaryEl = document.getElementById('modal-commentary');
+            commentaryEl.innerHTML = data.commentary;
+
             modal.classList.add('open');
             modal.setAttribute('aria-hidden', 'false');
             document.body.classList.add('modal-open');
-            // フォーカスを閉じるボタンに移動
             const closeBtn = modal.querySelector('.paper-modal-close');
             if (closeBtn) setTimeout(() => closeBtn.focus(), 50);
         }
