@@ -1940,6 +1940,25 @@
 
                         <!-- ▼ 既刊（書庫） -->
 
+                        <article class="book book--wine"
+                                 onclick="openPaperModal(this)"
+                                 onmouseenter="showBookPreview(this)"
+                                 onmouseleave="hideBookPreview()"
+                                 onfocus="showBookPreview(this)"
+                                 onblur="hideBookPreview()"
+                                 data-paper="n014e7807"
+                                 data-notion-id="014e7807-8e3e-4f29-a205-81cf1534f1a7"
+                                 role="button" tabindex="0"
+                                 aria-label="The Society of Thoracic Surgeons Expert … の論文解説を読む">
+                            <div class="book-spine">
+                                <div class="spine-band spine-band--top"></div>
+                                <div class="spine-top">Ann Thorac Surg · 2026</div>
+                                <div class="spine-title">The Society of Thoracic Surgeons Expert Consensus Pathway for …</div>
+                                <div class="spine-bottom">Commentary</div>
+                                <div class="spine-band spine-band--bottom"></div>
+                            </div>
+                        </article>
+
                         <article class="book book--ivory"
                                  onclick="openPaperModal(this)"
                                  onmouseenter="showBookPreview(this)"
@@ -2519,6 +2538,29 @@ Outcome: 早期診断と予防的手術により予後改善。遺伝子診断�
 
 Journal Rank: Q2</p><div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm mt-6"><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">STUDY INFO</div><div class="space-y-2"><div><strong>研究デザイン</strong>: Systematic review</div><div><strong>対象疾患</strong>: TAAA、AAD Type A、AAD Type B、Arch aneurysm、Ascending aneurysm</div><div><strong>エビデンスレベル</strong>: Level V</div><div><strong>Journal Rank</strong>: Q2</div></div></div></div>`,
                 commentary: `<p class="text-zinc-400 text-sm">（コメント準備中）</p>`
+            },
+            n014e7807: {
+                journal: "Annals of Thoracic Surgery",
+                citation: "2026",
+                title: "The Society of Thoracic Surgeons Expert Consensus Pathway for Robotic Cardiac Surgical Training",
+                doi: "https://doi.org/10.1016/j.athoracsur.2026.01.003",
+                summary: `<p class="mb-6 text-[14.5px] leading-relaxed">STS 2026 Expert Consensus(Ann Thorac Surg)。ロボット心臓外科プログラムの安全な立ち上げと習熟のため、Phase 0(術者要件:成人心臓外科3年以上、CABG 250例 or MV手術75例、施設250例/年以上)からPhase I(チーム編成・シミュレーション)、Phase II(peer-to-peer + 初期10例proctored)、Phase III(50例、O/E≤1、コンパートメント時間管理)、Phase IV(高難度・複合術式・redo・経皮的cannulation/endoballoonへ拡張)までを段階化。冠動脈(MIDCAB/TECAB)と心内(MVr/Maze/myectomy等)の二トラックで、症例選択基準・術前画像評価・モニタリング目標時間・アウトカム指標を具体的に提示。</p><div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm mt-6"><div><div class="text-zinc-400 text-xs mb-2 tracking-wider">STUDY INFO</div><div class="space-y-2"><div><strong>研究デザイン</strong>: Systematic review</div><div><strong>対象疾患</strong>: Robot、HOCM</div><div><strong>エビデンスレベル</strong>: Level V</div><div><strong>Journal Rank</strong>: Q1</div></div></div></div>`,
+                commentary: `<p><span class="inline-block text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded mr-2 align-middle font-semibold tracking-wider">大島の私見</span>中村先生・田端先生が共著者として名を連ねている論文。今後のロボット心臓外科手術プログラムの標準化・規範化を明確に打ち出した重要文書。
+
+【注目ポイント】
+施設評価の中核指標として O/E mortality および major morbidity ≤1 を Phase II〜IV の進級要件に組み込んでいる点が新しい試み。従来のラーニングカーブ論文が「術者個人の習熟」に焦点を当てていたのに対し、本consensusは「施設としてのアウトカム責任」を明示的に求めており、ロボット心臓外科プログラム認証の枠組みに発展しうる重要な布石と考えられる。
+
+コンパートメント化された時間管理(Table 3)とeconomy of motion指標(Table 4)も、プロセス評価とアウトカム評価を両輪で求める姿勢として注目に値する。
+
+【リスク回避(risk aversion)の論点 — 2026-05-23 追記】
+施設アウトカム指標を進級要件に据えると、NY State CABG Report Card(1990年代)以来繰り返し報告されてきた「ハイリスク患者の忌避・他施設輸出」を構造的に誘発しうる。本consensusは①O/E ratio によるリスク補正、②Phase IV での high-risk/frail/redo への段階的拡張、で部分的に緩和しているが、以下の構造的問題が残る:
+・STS risk calculator は frailty / sarcopenia / 解剖学的ハイリスクを十分に拾えない
+・O/E ≤1 はゼロサム閾値(半数施設が必然的に未達)で症例選別圧力に直結
+・Phase 0 時点で「適応症例の事前選別基準」(favorable anatomy, 低 comorbid risk 等)が既に組み込まれており、ハイリスク症例は最初から土俵に上がらない
+・28著者中10名がメーカー advisory で、公的報告圧力との利益相反が残存
+
+結果として「ロボット ≒ selected good-risk」「open ≒ ハイリスクの受け皿」の役割分担が制度化される側面があり、open surgery の存在意義は逆説的に強化される。将来、大動脈外科で同種の枠組みを作る際には intent-to-treat outcomes、decline rate(拒否率)の透明化、case-mix index 併記、別建て high-risk registry など「ハイリスクを引き受ける施設を評価から罰しない」指標設計が必須。川崎の非選択的SCI率16.7%(選択的8%)はこの議論の実証的根拠となりうる。
+(詳細考察 → 教科書プロジェクト 暗黙知ログ 2026-05-23 エントリ)</p>`
             }
         };
 
@@ -2578,6 +2620,11 @@ Journal Rank: Q2</p><div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm mt
                 eyebrow: "その他 · 2025",
                 title: "Genetics of Thoracic and Thoracoabdominal Aortic Dissections and Aneurysms",
                 text: "Design: Narrative review\n\nMethods: 胸部大動脈解離・大動脈瘤の遺伝学的原因に関する文献レビュー。遺伝子検査の適応、結果解釈、臨床管理ガイドラインを概説。\n\nPopulation: 60歳以下の胸部大動脈解離…"
+            },
+            n014e7807: {
+                eyebrow: "Ann Thorac Surg · 2026",
+                title: "The Society of Thoracic Surgeons Expert Consensus Pathway for Robotic Cardiac Su",
+                text: "STS 2026 Expert Consensus(Ann Thorac Surg)。ロボット心臓外科プログラムの安全な立ち上げと習熟のため、Phase 0(術者要件:成人心臓外科3年以上、CABG 250例 or MV手術75例、施設25…"
             }
         };
 
