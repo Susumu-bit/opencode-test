@@ -1390,6 +1390,94 @@
                     <p class="text-sm text-zinc-600 leading-relaxed">胸腹部大動脈瘤に対する open repair の22年成績、Type A 解離の生涯管理、左開胸下大動脈手術における iNO 使用経験などを継続的に解析・発表しています。</p>
                 </div>
             </div>
+            <!-- ▼ フィーチャードプロジェクト: 大動脈外科 患者データベース -->
+            <div class="mt-14 border border-[#0f4c81]/20 rounded-3xl overflow-hidden shadow-sm">
+                <!-- ヘッダー -->
+                <div class="bg-gradient-to-r from-[#0f4c81] to-[#1e6091] px-8 py-6 flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center text-2xl">🫀</div>
+                    <div>
+                        <div class="text-white/60 text-xs font-medium tracking-widest mb-0.5">FEATURED PROJECT</div>
+                        <h3 class="text-white text-xl font-semibold">大動脈外科 患者データベースシステム</h3>
+                    </div>
+                    <div class="ml-auto hidden md:flex items-center gap-2">
+                        <span class="bg-white/15 text-white text-xs px-3 py-1 rounded-full">ローカル運用</span>
+                        <span class="bg-emerald-400/20 text-emerald-200 text-xs px-3 py-1 rounded-full border border-emerald-400/30">実稼働中</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8">
+                    <!-- 概要 -->
+                    <p class="text-sm text-zinc-600 leading-relaxed mb-8">
+                        川崎幸病院大動脈センターの手術症例データを一元管理する院内専用ツール。CSV取込みから生存解析・リスク因子解析・術式別成績比較まで、臨床研究に必要な統計処理をブラウザ上で即時実行できるよう自ら設計・開発。患者個人情報を含むため外部公開はせず、ローカル環境での実運用を行っています。
+                    </p>
+
+                    <!-- 機能カテゴリ -->
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <!-- データ管理 -->
+                        <div class="bg-zinc-50 rounded-2xl p-5">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-base">📋</span>
+                                <span class="text-xs font-semibold text-zinc-500 tracking-wider">DATA MANAGEMENT</span>
+                            </div>
+                            <ul class="space-y-1.5 text-sm text-zinc-700">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0f4c81] flex-shrink-0"></span>患者一覧（多軸フィルタ）</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0f4c81] flex-shrink-0"></span>CSVインポート・重複排除</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0f4c81] flex-shrink-0"></span>生存情報アップデート</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0f4c81] flex-shrink-0"></span>Table 1（術前背景）自動生成</li>
+                            </ul>
+                        </div>
+                        <!-- 統計解析 -->
+                        <div class="bg-zinc-50 rounded-2xl p-5">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-base">📊</span>
+                                <span class="text-xs font-semibold text-zinc-500 tracking-wider">STATISTICAL ANALYSIS</span>
+                            </div>
+                            <ul class="space-y-1.5 text-sm text-zinc-700">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600 flex-shrink-0"></span>Kaplan-Meier 生存解析</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600 flex-shrink-0"></span>リスク因子解析</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600 flex-shrink-0"></span>年次トレンド</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600 flex-shrink-0"></span>期間比較（Phase A vs B）</li>
+                            </ul>
+                        </div>
+                        <!-- 専門解析 -->
+                        <div class="bg-zinc-50 rounded-2xl p-5">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-base">🔬</span>
+                                <span class="text-xs font-semibold text-zinc-500 tracking-wider">SPECIALIZED MODULES</span>
+                            </div>
+                            <ul class="space-y-1.5 text-sm text-zinc-700">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0"></span>iNO解析（NO吸入療法）</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0"></span>2-stage vs 1-stage 比較</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0"></span>マルパーフュージョン解析</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0"></span>再介入・TEVAR抜去解析</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- テクノロジースタック -->
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="text-xs text-zinc-500 self-center mr-1 font-medium">Tech Stack:</span>
+                        <span class="bg-[#0f4c81]/8 text-[#0f4c81] text-xs px-3 py-1 rounded-full border border-[#0f4c81]/20">Python 3</span>
+                        <span class="bg-[#0f4c81]/8 text-[#0f4c81] text-xs px-3 py-1 rounded-full border border-[#0f4c81]/20">Streamlit</span>
+                        <span class="bg-emerald-50 text-emerald-700 text-xs px-3 py-1 rounded-full border border-emerald-200">Pandas</span>
+                        <span class="bg-emerald-50 text-emerald-700 text-xs px-3 py-1 rounded-full border border-emerald-200">Plotly</span>
+                        <span class="bg-emerald-50 text-emerald-700 text-xs px-3 py-1 rounded-full border border-emerald-200">Lifelines (KM)</span>
+                        <span class="bg-amber-50 text-amber-700 text-xs px-3 py-1 rounded-full border border-amber-200">SciPy</span>
+                        <span class="bg-amber-50 text-amber-700 text-xs px-3 py-1 rounded-full border border-amber-200">StatsModels</span>
+                        <span class="bg-zinc-100 text-zinc-600 text-xs px-3 py-1 rounded-full border border-zinc-200">SQLite</span>
+                    </div>
+
+                    <!-- プライバシー注記 -->
+                    <div class="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-2xl px-5 py-4">
+                        <i class="fa-solid fa-lock text-amber-600 mt-0.5 text-sm flex-shrink-0"></i>
+                        <p class="text-xs text-amber-800 leading-relaxed">
+                            本システムは実患者データを含むため、院内ローカル環境のみで運用しています。デモ・スクリーンショットの公開は匿名化処理後に限定しています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- ▲ フィーチャードプロジェクト -->
+
             <p class="mt-10 text-center text-xs text-zinc-400">※ 研究内容は本人が発表・公開した範囲のみ掲載しています。共同研究のご相談は <a href="#contact" class="underline">問い合わせ</a> より。</p>
         </div>
     </section>
